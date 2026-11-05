@@ -1,0 +1,1791 @@
+{
+  "accuracy": 0.7666666666666667,
+  "rows": [
+    {
+      "id": "S24",
+      "truth": "xn_transport",
+      "predicted": "xn_transport",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 9.5,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_17"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "xn_transport",
+            "evidence": [
+              "cell_17: ho_exec_sr_pct=99.7, ho_prep_sr_pct=64.2, rlf_per_hour=1, rsrp_avg_dbm=-86, sinr_dl_avg_db=16.4, ul_sinr_avg_db=10.5, pusch_bler_pct=4.8, phr_avg_db=16.8, prb_util_dl_pct=36",
+              "ERROR Xn setup failure toward cell_8: transport network layer unreachable",
+              "ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_10"
+            ],
+            "recommended_fix": "Investigate and resolve the transport network issues affecting Xn setup with neighboring cells.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "truth": "target_overload",
+      "predicted": "target_overload",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 6,
+      "seconds": 7.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_6"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_6"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "target_overload",
+            "evidence": [
+              "Handover preparation success rate for cell_14 is 76.7%, indicating issues with handover preparation.",
+              "ERROR: HO prep rejected by cell_6: cause=radio-resources-not-available",
+              "WARN: Admission control reject on cell_6, DL PRB utilization 91%",
+              "WARN: Admission control reject on cell_6, DL PRB utilization 91%",
+              "WARN: Admission control reject on cell_6, DL PRB utilization 91%",
+              "WARN: Admission control reject on cell_6, DL PRB utilization 91%"
+            ],
+            "recommended_fix": "Investigate and optimize resource allocation on cell_6 to reduce PRB utilization and allow for handovers.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "truth": "late_trigger",
+      "predicted": "late_trigger",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 11.6,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_20"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_21"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_22"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "late_trigger",
+            "evidence": [
+              "Handover execution success rate: 85.3%",
+              "RLF per hour: 35",
+              "ERROR T310 expired before HO command, UE 6119 context released on cell_20",
+              "ERROR T310 expired before HO command, UE 2697 context released on cell_20",
+              "WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-111dBm"
+            ],
+            "recommended_fix": "Adjust the handover trigger parameters (A3 offset / time-to-trigger) to be less conservative.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "truth": "missing_neighbor",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 10,
+      "seconds": 9.7,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_19"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_118"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "cell_118"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_20"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "cell_20"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_21"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "cell_21"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "truth": "xn_transport",
+      "predicted": "xn_transport",
+      "correct": true,
+      "ambiguous": true,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 6.1,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_15"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_16"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "xn_transport",
+            "evidence": [
+              "Handover preparation success rate for cell_15 is 45.5%, indicating issues with handover.",
+              "ERROR SCTP association to cell_4 timeout, Xn link down.",
+              "ERROR Xn setup failure toward cell_16: transport network layer unreachable.",
+              "WARN RLF detected for UE 9228, cause=out-of-sync, serving cell_15.",
+              "Handover execution success rate for cell_4 is 98.9% and for cell_16 is 98.9%, indicating they are healthy."
+            ],
+            "recommended_fix": "Investigate and resolve the Xn transport issues affecting cell_15, particularly the SCTP association timeouts.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S29",
+      "truth": "ul_power_control",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 10,
+      "seconds": 9.1,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_20"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_21"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_22"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_23"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_24"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_25"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_26"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_27"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S26",
+      "truth": "ul_power_control",
+      "predicted": "ul_power_control",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 4,
+      "seconds": 12.5,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_16"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_16"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "ul_power_control",
+            "evidence": [
+              "UL SINR: 2.5 dB (below threshold)",
+              "PUSCH BLER: 29.6% (above threshold)",
+              "Negative Power Headroom: -5.7 dB",
+              "ERROR logs indicating RLF due to UL sync loss"
+            ],
+            "recommended_fix": "Review and adjust uplink power control settings to ensure UEs are not power-limited.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "truth": "xn_transport",
+      "predicted": "xn_transport",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 6.1,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_15"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_17"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_15"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "xn_transport",
+            "evidence": [
+              "Handover preparation success rate for cell_15 is 69.8%, indicating issues with handover preparation.",
+              "ERROR logs show multiple Xn HO prep timeouts toward cell_17, indicating a failure in the Xn transport path.",
+              "SCTP association to cell_17 timeout, Xn link down."
+            ],
+            "recommended_fix": "Investigate and restore the Xn transport link to cell_17.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S27",
+      "truth": "ul_power_control",
+      "predicted": "ul_power_control",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 5,
+      "seconds": 11.7,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_13"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_12"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "ul_power_control",
+            "evidence": [
+              "Handover execution success rate: 85.8% (below threshold)",
+              "RLF per hour: 15 (above threshold)",
+              "UL SINR: 1.5 dB (below threshold)",
+              "PUSCH BLER: 24.0% (above threshold)",
+              "Negative power headroom: -2.5 dB"
+            ],
+            "recommended_fix": "Adjust the uplink power control settings to ensure UEs have sufficient power headroom.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "truth": "target_overload",
+      "predicted": "target_overload",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 3,
+      "tool_calls": 4,
+      "seconds": 5.0,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_17"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "target_overload",
+            "evidence": [
+              "cell_14 HO preparation success rate: 81.3%",
+              "cell_17 HO prep rejected by cell_17: cause=radio-resources-not-available",
+              "cell_17 DL PRB utilization 95%"
+            ],
+            "recommended_fix": "Investigate and optimize resource allocation on cell_17 to reduce PRB utilization and allow handovers from cell_14.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "truth": "coverage_edge",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 10,
+      "seconds": 9.2,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_18"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_19"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_17"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_20"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_21"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_22"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_23"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "truth": "coverage_edge",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 10,
+      "seconds": 9.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_3"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_5"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_6"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_7"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_9"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "truth": "missing_neighbor",
+      "predicted": "missing_neighbor",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 6,
+      "seconds": 7.4,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_324"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "cell_324"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "neighbor"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "missing_neighbor",
+            "evidence": [
+              "Handover execution success rate: 87.4%",
+              "Handover preparation success rate: 69.6%",
+              "RLF per hour: 3",
+              "ERROR HO prep failed: target PCI 324 not found in NRT of cell_8",
+              "WARN ANR: unknown PCI 324 reported in MeasReport by UE 4697, no neighbor relation"
+            ],
+            "recommended_fix": "Add cell_324 to the neighbor relation table for cell_8.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "truth": "late_trigger",
+      "predicted": "late_trigger",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 12.0,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_15"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_13"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "late_trigger",
+            "evidence": [
+              "Handover execution success rate: 81.8%",
+              "RLF per hour: 36",
+              "ERROR: T310 expired before HO command, UE 5835 context released on cell_14",
+              "WARN: A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-116dBm"
+            ],
+            "recommended_fix": "Adjust handover trigger parameters (A3 offset / time-to-trigger) to be less conservative.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "truth": "missing_neighbor",
+      "predicted": "missing_neighbor",
+      "correct": true,
+      "ambiguous": true,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 6.3,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_15"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_5"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "missing_neighbor",
+            "evidence": [
+              "Handover execution success rate: 87.3%, preparation success rate: 69.1% (cell_15)",
+              "ERROR HO prep failed: target PCI 511 not found in NRT of cell_15",
+              "WARN ANR: unknown PCI 511 reported in MeasReport by UE 3529, no neighbor relation"
+            ],
+            "recommended_fix": "Add target cell with PCI 511 to the neighbor relation table for cell_15.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "truth": "late_trigger",
+      "predicted": "late_trigger",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 6,
+      "seconds": 13.6,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_6"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_5"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_7"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "late_trigger",
+            "evidence": [
+              "Handover Execution Success Rate: 78.5%",
+              "RLF per hour: 37",
+              "ERROR: T310 expired before HO command, UE 1307 context released on cell_6",
+              "WARN: A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-116dBm"
+            ],
+            "recommended_fix": "Adjust handover trigger parameters (A3 offset / time-to-trigger) to be less conservative.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S28",
+      "truth": "ul_power_control",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 10,
+      "seconds": 9.7,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_13"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_12"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_15"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_16"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_17"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_18"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "truth": "missing_neighbor",
+      "predicted": "missing_neighbor",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 5,
+      "seconds": 10.6,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_9"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_621"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "cell_621"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "missing_neighbor",
+            "evidence": [
+              "Handover Execution Success Rate: 87.5% (below threshold)",
+              "Handover Preparation Success Rate: 68.7% (below threshold)",
+              "ERROR: HO prep failed: target PCI 621 not found in NRT of cell_9",
+              "WARN: unknown PCI 621 reported in MeasReport by UE (multiple occurrences)"
+            ],
+            "recommended_fix": "Add PCI 621 to the neighbor relation table for cell_9.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "truth": "late_trigger",
+      "predicted": "late_trigger",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 3,
+      "tool_calls": 3,
+      "seconds": 9.3,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "late_trigger",
+            "evidence": [
+              "Handover execution success rate: 78.3%",
+              "RLF per hour: 36",
+              "ERROR logs: 'T310 expired before HO command'",
+              "WARN logs: 'A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-110dBm'"
+            ],
+            "recommended_fix": "Adjust handover trigger parameters (A3 offset / time-to-trigger) to be less conservative.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "truth": "late_trigger",
+      "predicted": "late_trigger",
+      "correct": true,
+      "ambiguous": true,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 5,
+      "seconds": 11.1,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_11"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_12"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "late_trigger",
+            "evidence": [
+              "Handover execution success rate: 79.5% (below 98%)",
+              "RLF: 27 per hour (above 5 per hour)",
+              "ERROR: T310 expired before HO command, UE 8381 context released on cell_10",
+              "WARN: A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-116dBm",
+              "WARN: A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-116dBm"
+            ],
+            "recommended_fix": "Adjust handover trigger parameters (A3 offset / time-to-trigger) to be less conservative.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "truth": "missing_neighbor",
+      "predicted": "missing_neighbor",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 5,
+      "seconds": 11.7,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_9"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_785"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "cell_785"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "missing_neighbor",
+            "evidence": [
+              "Handover Execution Success Rate: 91.7%",
+              "Handover Preparation Success Rate: 77.1%",
+              "ERROR: HO prep failed: target PCI 785 not found in NRT of cell_9 (3 occurrences)",
+              "WARN: unknown PCI 785 reported in MeasReport by UE (5 occurrences)"
+            ],
+            "recommended_fix": "Update the neighbor relation table to include PCI 785 as a valid neighbor for cell_9.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S30",
+      "truth": "ul_power_control",
+      "predicted": "ul_power_control",
+      "correct": true,
+      "ambiguous": true,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 10.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_5"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_14"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "ul_power_control",
+            "evidence": [
+              "Handover execution success rate: 84.9% (below threshold)",
+              "RLF per hour: 12 (above threshold)",
+              "UL SINR: 3.7 dB (below threshold)",
+              "PUSCH BLER: 21.9% (above threshold)",
+              "ERROR logs indicating UL sync loss for multiple UEs",
+              "ERROR SCTP association to cell_5 timeout",
+              "ERROR Xn setup failure toward cell_14"
+            ],
+            "recommended_fix": "Review and adjust uplink power control settings to ensure UEs are not power limited.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "truth": "target_overload",
+      "predicted": "target_overload",
+      "correct": true,
+      "ambiguous": true,
+      "status": "ok",
+      "steps": 3,
+      "tool_calls": 4,
+      "seconds": 4.5,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_2"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "target_overload",
+            "evidence": [
+              "cell_2 handover preparation success rate: 75.5%",
+              "cell_10 DL PRB utilization: 94% (admission control reject)",
+              "cell_10 DL PRB utilization: 97% (high utilization)",
+              "ERROR HO prep rejected by cell_10: cause=radio-resources-not-available"
+            ],
+            "recommended_fix": "Investigate and optimize resource allocation on cell_10 to reduce PRB utilization and allow handovers from cell_2.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "truth": "coverage_edge",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 7,
+      "seconds": 12.0,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_5"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_3"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_6"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "truth": "target_overload",
+      "predicted": "target_overload",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 6,
+      "seconds": 6.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_12"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_18"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_12"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_18"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "target_overload",
+            "evidence": [
+              "Handover preparation success rate for cell_12 is 84.2%, indicating issues with handover preparations.",
+              "ERROR: HO prep rejected by cell_18: cause=radio-resources-not-available (4 occurrences).",
+              "WARN: Admission control reject on cell_18, DL PRB utilization 93% (3 occurrences).",
+              "KPI for cell_18 shows DL PRB utilization at 96%, indicating it is overloaded."
+            ],
+            "recommended_fix": "Investigate and optimize resource allocation on cell_18 to handle incoming handovers from cell_12.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "truth": "target_overload",
+      "predicted": null,
+      "correct": false,
+      "ambiguous": false,
+      "status": "max_steps",
+      "steps": 8,
+      "tool_calls": 8,
+      "seconds": 9.2,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "handover"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_10"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "truth": "coverage_edge",
+      "predicted": "coverage_edge",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 3,
+      "tool_calls": 3,
+      "seconds": 9.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_16"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "coverage_edge",
+            "evidence": [
+              "Handover execution success rate: 84.5% (below threshold of 98%)",
+              "RLF per hour: 30 (above threshold of 5)",
+              "DL RSRP: -115 dBm (below threshold of -95 dBm)",
+              "DL SINR: 1.0 dB (below threshold of 10 dB)",
+              "WARN RLF detected for UE 1821, cause=out-of-sync, serving cell_16",
+              "WARN RLF detected for UE 2113, cause=out-of-sync, serving cell_16",
+              "WARN RLF detected for UE 4044, cause=out-of-sync, serving cell_16",
+              "WARN MeasReport: serving cell_16 RSRP=-111dBm below -108dBm, no target above A3 threshold"
+            ],
+            "recommended_fix": "Improve radio coverage in the area served by cell_16.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "truth": "coverage_edge",
+      "predicted": "coverage_edge",
+      "correct": true,
+      "ambiguous": true,
+      "status": "ok",
+      "steps": 3,
+      "tool_calls": 3,
+      "seconds": 11.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_4"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "coverage_edge",
+            "evidence": [
+              "Handover Execution Success Rate: 79.2% (below 98%)",
+              "RLF per hour: 15 (above 5)",
+              "DL RSRP: -114 dBm (below -95 dBm)",
+              "DL SINR: 2.4 dB (below 10 dB)",
+              "ERROR: Xn setup failure toward cell_12: transport network layer unreachable",
+              "WARN: RLF detected for UE 5011, cause=out-of-sync, serving cell_4",
+              "WARN: Serving cell SINR below 3dB for UE 7790 at cell edge of cell_4"
+            ],
+            "recommended_fix": "Improve coverage at the cell edge, possibly by adding additional antennas or adjusting power levels.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "truth": "xn_transport",
+      "predicted": "xn_transport",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 5,
+      "tool_calls": 7,
+      "seconds": 14.8,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_2"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_3"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_8"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_3"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "xn_transport",
+            "evidence": [
+              "Handover preparation success rate for cell_2 is 40.4%.",
+              "ERROR: Xn setup failure toward cell_8: transport network layer unreachable",
+              "ERROR: SCTP association to cell_3 timeout, Xn link down"
+            ],
+            "recommended_fix": "Investigate and resolve the transport network issues affecting Xn links to cell_3 and cell_8.",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "truth": "xn_transport",
+      "predicted": "xn_transport",
+      "correct": true,
+      "ambiguous": false,
+      "status": "ok",
+      "steps": 4,
+      "tool_calls": 5,
+      "seconds": 6.9,
+      "trace": [
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_20"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "ERROR"
+          }
+        },
+        {
+          "tool": "search_logs",
+          "args": {
+            "keyword": "WARN"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_13"
+          }
+        },
+        {
+          "tool": "get_kpi",
+          "args": {
+            "cell_id": "cell_5"
+          }
+        },
+        {
+          "tool": "submit_diagnosis",
+          "args": {
+            "root_cause": "xn_transport",
+            "evidence": [
+              "Handover preparation success rate for cell_20 is 58.3%, indicating issues with handover preparation.",
+              "ERROR logs indicate multiple Xn HO prep timeouts toward cell_13 and SCTP association timeouts, suggesting transport issues.",
+              "Cell_13 has a healthy handover execution and preparation success rate, indicating it is not the problem.",
+              "Cell_5 also shows good handover performance, further confirming the issue lies with the transport path."
+            ],
+            "recommended_fix": "Investigate and resolve the transport network issues affecting Xn links to cell_13.",
+            "confidence": "high"
+          }
+        }
+      ]
+    }
+  ]
+}

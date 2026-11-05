@@ -1,0 +1,4153 @@
+[
+  {
+    "id": "S26",
+    "symptom": "Users report dropped calls around cell_2. Diagnose the problem.",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 80.8,
+        "ho_prep_sr_pct": 99.9,
+        "rlf_per_hour": 28,
+        "rsrp_avg_dbm": -96,
+        "sinr_dl_avg_db": 14.6,
+        "ul_sinr_avg_db": 12.7,
+        "pusch_bler_pct": 2.4,
+        "phr_avg_db": 10.8,
+        "prb_util_dl_pct": 55
+      },
+      "cell_20": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 14.1,
+        "ul_sinr_avg_db": 13.7,
+        "pusch_bler_pct": 2.9,
+        "phr_avg_db": 10.1,
+        "prb_util_dl_pct": 34
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 19.4,
+        "ul_sinr_avg_db": 12.2,
+        "pusch_bler_pct": 1.4,
+        "phr_avg_db": 17.9,
+        "prb_util_dl_pct": 51
+      }
+    },
+    "logs": [
+      "10:00:17 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-117dBm",
+      "10:02:12 DEBUG scheduler tick ok on cell_2",
+      "10:03:31 ERROR T310 expired before HO command, UE 7574 context released on cell_2",
+      "10:05:45 INFO RRC reconfiguration complete for UE 1755",
+      "10:06:01 INFO PDU session modify ok for UE 1226",
+      "10:08:32 DEBUG scheduler tick ok on cell_2",
+      "10:10:11 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-117dBm",
+      "10:18:16 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-117dBm",
+      "10:28:00 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-117dBm",
+      "10:28:20 INFO RRC reconfiguration complete for UE 5417",
+      "10:30:52 INFO Handover completed cell_2->cell_20 for UE 2933",
+      "10:32:35 ERROR T310 expired before HO command, UE 6878 context released on cell_2",
+      "10:35:00 INFO RRC reconfiguration complete for UE 9448",
+      "10:36:21 ERROR T310 expired before HO command, UE 6029 context released on cell_2",
+      "10:36:44 INFO PDU session modify ok for UE 7541",
+      "10:38:14 DEBUG scheduler tick ok on cell_2",
+      "10:40:38 INFO Periodic measurement report received from UE 7100",
+      "10:42:46 INFO PDU session modify ok for UE 6976",
+      "10:44:37 DEBUG scheduler tick ok on cell_2",
+      "10:48:36 DEBUG scheduler tick ok on cell_2",
+      "10:48:44 INFO Handover completed cell_2->cell_20 for UE 4217",
+      "10:51:08 ERROR T310 expired before HO command, UE 9589 context released on cell_2",
+      "10:53:17 INFO Handover completed cell_2->cell_20 for UE 7757",
+      "10:54:10 DEBUG PM counter collection finished for cell_2",
+      "10:55:41 INFO Handover completed cell_2->cell_20 for UE 9202",
+      "10:56:37 INFO Periodic measurement report received from UE 5981"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S52",
+    "symptom": "KPI alarm raised on cell_20: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_20",
+    "kpis": {
+      "cell_20": {
+        "ho_exec_sr_pct": 89.2,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 19,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 14.3,
+        "ul_sinr_avg_db": 3.6,
+        "pusch_bler_pct": 26.3,
+        "phr_avg_db": -1.2,
+        "prb_util_dl_pct": 51
+      },
+      "cell_3": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 21.5,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 9.1,
+        "prb_util_dl_pct": 37
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.3,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 20.9,
+        "ul_sinr_avg_db": 14.8,
+        "pusch_bler_pct": 3.1,
+        "phr_avg_db": 17.2,
+        "prb_util_dl_pct": 34
+      }
+    },
+    "logs": [
+      "10:04:58 WARN PUSCH BLER above 15% on cell_20, UL power headroom negative",
+      "10:09:51 INFO RRC reconfiguration complete for UE 6523",
+      "10:10:56 DEBUG scheduler tick ok on cell_20",
+      "10:16:46 ERROR RLF cause=UL sync loss for UE 3455, serving cell_20, DL RSRP normal",
+      "10:17:57 INFO Handover completed cell_20->cell_3 for UE 2291",
+      "10:20:14 DEBUG scheduler tick ok on cell_20",
+      "10:20:57 ERROR RLF cause=UL sync loss for UE 3156, serving cell_20, DL RSRP normal",
+      "10:22:55 DEBUG scheduler tick ok on cell_20",
+      "10:24:48 INFO RRC reconfiguration complete for UE 1992",
+      "10:26:45 INFO RRC reconfiguration complete for UE 2634",
+      "10:26:53 WARN PUSCH BLER above 15% on cell_20, UL power headroom negative",
+      "10:27:42 INFO RRC reconfiguration complete for UE 3453",
+      "10:34:29 INFO Periodic measurement report received from UE 5355",
+      "10:39:31 INFO RRC reconfiguration complete for UE 7020",
+      "10:42:19 ERROR RLF cause=UL sync loss for UE 6191, serving cell_20, DL RSRP normal",
+      "10:45:04 ERROR RLF cause=UL sync loss for UE 3029, serving cell_20, DL RSRP normal",
+      "10:49:25 INFO RRC reconfiguration complete for UE 4637",
+      "10:50:06 DEBUG PM counter collection finished for cell_20",
+      "10:53:58 DEBUG scheduler tick ok on cell_20"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S49",
+    "symptom": "KPI alarm raised on cell_2: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 59.0,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 21.4,
+        "ul_sinr_avg_db": 12.7,
+        "pusch_bler_pct": 3.7,
+        "phr_avg_db": 16.8,
+        "prb_util_dl_pct": 37
+      },
+      "cell_12": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.0,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 20.0,
+        "ul_sinr_avg_db": 15.2,
+        "pusch_bler_pct": 4.2,
+        "phr_avg_db": 14.4,
+        "prb_util_dl_pct": 30
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 15.8,
+        "ul_sinr_avg_db": 16.0,
+        "pusch_bler_pct": 1.6,
+        "phr_avg_db": 9.8,
+        "prb_util_dl_pct": 28
+      }
+    },
+    "logs": [
+      "10:01:56 ERROR Xn setup failure toward cell_16: transport network layer unreachable",
+      "10:02:13 INFO RRC reconfiguration complete for UE 9684",
+      "10:14:32 DEBUG PM counter collection finished for cell_2",
+      "10:16:37 INFO Periodic measurement report received from UE 5457",
+      "10:25:52 INFO RRC reconfiguration complete for UE 6793",
+      "10:31:37 INFO RRC reconfiguration complete for UE 9356",
+      "10:35:37 INFO Periodic measurement report received from UE 5107",
+      "10:35:48 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_12",
+      "10:38:46 INFO Handover completed cell_2->cell_12 for UE 9677",
+      "10:39:18 DEBUG PM counter collection finished for cell_2",
+      "10:39:50 INFO PDU session modify ok for UE 3143",
+      "10:41:00 DEBUG PM counter collection finished for cell_2",
+      "10:44:05 INFO RRC reconfiguration complete for UE 9482",
+      "10:47:52 INFO Periodic measurement report received from UE 5817",
+      "10:48:18 ERROR Xn setup failure toward cell_16: transport network layer unreachable",
+      "10:50:11 ERROR SCTP association to cell_12 timeout, Xn link down",
+      "10:51:42 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_12",
+      "10:54:12 DEBUG scheduler tick ok on cell_2"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S55",
+    "symptom": "Handover failures have increased on cell_2 in the last hour. What is the root cause?",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 89.2,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 15,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 21.9,
+        "ul_sinr_avg_db": 1.4,
+        "pusch_bler_pct": 28.1,
+        "phr_avg_db": -1.1,
+        "prb_util_dl_pct": 41
+      },
+      "cell_4": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 20.6,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 17.4,
+        "prb_util_dl_pct": 47
+      },
+      "cell_8": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 19.0,
+        "ul_sinr_avg_db": 12.5,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 10.3,
+        "prb_util_dl_pct": 50
+      }
+    },
+    "logs": [
+      "10:03:44 INFO PDU session modify ok for UE 4612",
+      "10:08:26 INFO Periodic measurement report received from UE 1730",
+      "10:10:32 INFO RRC reconfiguration complete for UE 6299",
+      "10:12:55 DEBUG scheduler tick ok on cell_2",
+      "10:15:46 INFO RRC reconfiguration complete for UE 8572",
+      "10:17:34 WARN Admission control reject on cell_4, DL PRB utilization 97%",
+      "10:20:38 INFO RRC reconfiguration complete for UE 1101",
+      "10:22:20 ERROR RLF cause=UL sync loss for UE 7237, serving cell_2, DL RSRP normal",
+      "10:33:03 INFO Handover completed cell_2->cell_4 for UE 7252",
+      "10:36:11 ERROR HO prep rejected by cell_4: cause=radio-resources-not-available",
+      "10:40:11 INFO Handover completed cell_2->cell_4 for UE 3140",
+      "10:41:48 DEBUG PM counter collection finished for cell_2",
+      "10:43:51 WARN PUSCH BLER above 15% on cell_2, UL power headroom negative",
+      "10:44:02 INFO RRC reconfiguration complete for UE 9584",
+      "10:45:17 WARN PUSCH BLER above 15% on cell_2, UL power headroom negative",
+      "10:46:10 ERROR RLF cause=UL sync loss for UE 8703, serving cell_2, DL RSRP normal",
+      "10:47:42 WARN PUSCH BLER above 15% on cell_2, UL power headroom negative",
+      "10:49:03 INFO RRC reconfiguration complete for UE 6224",
+      "10:51:14 WARN UE 6146 at max Tx power (PHR<0), PUSCH SINR=3.7dB on cell_2",
+      "10:51:57 INFO Handover completed cell_2->cell_4 for UE 4142",
+      "10:52:26 WARN UE 3168 at max Tx power (PHR<0), PUSCH SINR=3.7dB on cell_2",
+      "10:55:13 INFO RRC reconfiguration complete for UE 4401",
+      "10:58:18 INFO Handover completed cell_2->cell_4 for UE 2253",
+      "10:59:26 WARN UE 3396 at max Tx power (PHR<0), PUSCH SINR=3.7dB on cell_2"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S50",
+    "symptom": "Handover failures have increased on cell_13 in the last hour. What is the root cause?",
+    "serving_cell": "cell_13",
+    "kpis": {
+      "cell_13": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 58.0,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 17.2,
+        "ul_sinr_avg_db": 13.2,
+        "pusch_bler_pct": 3.0,
+        "phr_avg_db": 10.1,
+        "prb_util_dl_pct": 35
+      },
+      "cell_10": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 19.1,
+        "ul_sinr_avg_db": 17.1,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 14.7,
+        "prb_util_dl_pct": 42
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 20.5,
+        "ul_sinr_avg_db": 16.7,
+        "pusch_bler_pct": 2.9,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 32
+      }
+    },
+    "logs": [
+      "10:00:11 ERROR Xn setup failure toward cell_9: transport network layer unreachable",
+      "10:05:06 INFO RRC reconfiguration complete for UE 5953",
+      "10:05:34 DEBUG scheduler tick ok on cell_13",
+      "10:06:02 ERROR SCTP association to cell_10 timeout, Xn link down",
+      "10:06:33 INFO Periodic measurement report received from UE 5717",
+      "10:07:24 INFO PDU session modify ok for UE 3265",
+      "10:10:42 ERROR SCTP association to cell_10 timeout, Xn link down",
+      "10:14:03 INFO RRC reconfiguration complete for UE 5533",
+      "10:15:56 INFO Handover completed cell_13->cell_10 for UE 6042",
+      "10:16:11 INFO Handover completed cell_13->cell_10 for UE 2577",
+      "10:17:24 INFO Periodic measurement report received from UE 4411",
+      "10:23:24 ERROR SCTP association to cell_10 timeout, Xn link down",
+      "10:24:39 WARN UE 9138 at max Tx power (PHR<0), PUSCH SINR=3.4dB on cell_13",
+      "10:32:17 ERROR SCTP association to cell_10 timeout, Xn link down",
+      "10:32:23 INFO RRC reconfiguration complete for UE 3892",
+      "10:33:26 DEBUG PM counter collection finished for cell_13",
+      "10:33:57 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_10",
+      "10:35:08 INFO PDU session modify ok for UE 5328",
+      "10:37:07 INFO Handover completed cell_13->cell_10 for UE 6316",
+      "10:50:12 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_10",
+      "10:51:55 INFO PDU session modify ok for UE 9386",
+      "10:53:38 ERROR RLF cause=UL sync loss for UE 3566, serving cell_13, DL RSRP normal",
+      "10:58:24 ERROR SCTP association to cell_10 timeout, Xn link down",
+      "10:58:34 DEBUG PM counter collection finished for cell_13"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S01",
+    "symptom": "KPI alarm raised on cell_2: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 75.2,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 34,
+        "rsrp_avg_dbm": -111,
+        "sinr_dl_avg_db": 1.2,
+        "ul_sinr_avg_db": 11.3,
+        "pusch_bler_pct": 2.3,
+        "phr_avg_db": 11.3,
+        "prb_util_dl_pct": 40
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 17.0,
+        "ul_sinr_avg_db": 10.1,
+        "pusch_bler_pct": 3.9,
+        "phr_avg_db": 9.0,
+        "prb_util_dl_pct": 27
+      },
+      "cell_3": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 21.3,
+        "ul_sinr_avg_db": 14.6,
+        "pusch_bler_pct": 2.1,
+        "phr_avg_db": 16.4,
+        "prb_util_dl_pct": 44
+      }
+    },
+    "logs": [
+      "10:00:01 INFO Handover completed cell_2->cell_9 for UE 2779",
+      "10:00:52 DEBUG PM counter collection finished for cell_2",
+      "10:01:06 WARN RLF detected for UE 4097, cause=out-of-sync, serving cell_2",
+      "10:03:00 INFO Handover completed cell_2->cell_9 for UE 1166",
+      "10:05:00 WARN Serving cell SINR below 3dB for UE 8483 at cell edge of cell_2",
+      "10:09:11 DEBUG PM counter collection finished for cell_2",
+      "10:12:07 INFO Periodic measurement report received from UE 3519",
+      "10:13:11 INFO RRC reconfiguration complete for UE 1344",
+      "10:15:38 INFO Periodic measurement report received from UE 7647",
+      "10:17:30 DEBUG scheduler tick ok on cell_2",
+      "10:22:51 WARN MeasReport: serving cell_2 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:25:50 DEBUG PM counter collection finished for cell_2",
+      "10:26:27 WARN Serving cell SINR below 3dB for UE 6506 at cell edge of cell_2",
+      "10:29:38 INFO PDU session modify ok for UE 7887",
+      "10:33:46 DEBUG scheduler tick ok on cell_2",
+      "10:36:19 DEBUG scheduler tick ok on cell_2",
+      "10:36:37 INFO RRC reconfiguration complete for UE 8282",
+      "10:37:08 INFO PDU session modify ok for UE 8926",
+      "10:37:50 WARN RLF detected for UE 7409, cause=out-of-sync, serving cell_2",
+      "10:40:01 WARN Serving cell SINR below 3dB for UE 2444 at cell edge of cell_2",
+      "10:43:36 DEBUG PM counter collection finished for cell_2",
+      "10:46:45 DEBUG PM counter collection finished for cell_2",
+      "10:49:24 INFO Periodic measurement report received from UE 1978",
+      "10:56:46 WARN Serving cell SINR below 3dB for UE 6955 at cell edge of cell_2"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S32",
+    "symptom": "Users report dropped calls around cell_14. Diagnose the problem.",
+    "serving_cell": "cell_14",
+    "kpis": {
+      "cell_14": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 84.2,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 20.7,
+        "ul_sinr_avg_db": 11.5,
+        "pusch_bler_pct": 3.8,
+        "phr_avg_db": 10.3,
+        "prb_util_dl_pct": 38
+      },
+      "cell_1": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 18.3,
+        "ul_sinr_avg_db": 11.6,
+        "pusch_bler_pct": 2.9,
+        "phr_avg_db": 16.8,
+        "prb_util_dl_pct": 94
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 17.5,
+        "ul_sinr_avg_db": 15.8,
+        "pusch_bler_pct": 5.0,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 49
+      }
+    },
+    "logs": [
+      "10:05:39 WARN Admission control reject on cell_1, DL PRB utilization 95%",
+      "10:10:49 DEBUG scheduler tick ok on cell_14",
+      "10:11:42 INFO PDU session modify ok for UE 5826",
+      "10:12:32 INFO PDU session modify ok for UE 6161",
+      "10:14:43 INFO PDU session modify ok for UE 7903",
+      "10:16:14 DEBUG PM counter collection finished for cell_14",
+      "10:16:30 INFO PDU session modify ok for UE 8394",
+      "10:17:35 INFO Periodic measurement report received from UE 4554",
+      "10:17:45 INFO Periodic measurement report received from UE 5163",
+      "10:19:00 ERROR HO prep rejected by cell_1: cause=radio-resources-not-available",
+      "10:21:01 INFO RRC reconfiguration complete for UE 2885",
+      "10:30:19 INFO RRC reconfiguration complete for UE 2643",
+      "10:31:54 INFO RRC reconfiguration complete for UE 9958",
+      "10:33:55 INFO PDU session modify ok for UE 4442",
+      "10:34:01 ERROR HO prep rejected by cell_1: cause=radio-resources-not-available",
+      "10:38:50 DEBUG scheduler tick ok on cell_14",
+      "10:41:40 WARN Admission control reject on cell_1, DL PRB utilization 95%",
+      "10:43:44 ERROR HO prep rejected by cell_1: cause=radio-resources-not-available",
+      "10:53:44 INFO RRC reconfiguration complete for UE 3593",
+      "10:58:39 DEBUG PM counter collection finished for cell_14"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S09",
+    "symptom": "Handover failures have increased on cell_6 in the last hour. What is the root cause?",
+    "serving_cell": "cell_6",
+    "kpis": {
+      "cell_6": {
+        "ho_exec_sr_pct": 71.2,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 18,
+        "rsrp_avg_dbm": -112,
+        "sinr_dl_avg_db": 5.2,
+        "ul_sinr_avg_db": 12.6,
+        "pusch_bler_pct": 2.9,
+        "phr_avg_db": 10.3,
+        "prb_util_dl_pct": 27
+      },
+      "cell_4": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 15.9,
+        "ul_sinr_avg_db": 13.8,
+        "pusch_bler_pct": 1.9,
+        "phr_avg_db": 11.1,
+        "prb_util_dl_pct": 35
+      },
+      "cell_1": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 19.0,
+        "ul_sinr_avg_db": 13.7,
+        "pusch_bler_pct": 4.6,
+        "phr_avg_db": 12.4,
+        "prb_util_dl_pct": 43
+      }
+    },
+    "logs": [
+      "10:01:45 INFO Periodic measurement report received from UE 3963",
+      "10:02:49 INFO Handover completed cell_6->cell_4 for UE 6692",
+      "10:05:39 WARN RLF detected for UE 7317, cause=out-of-sync, serving cell_6",
+      "10:06:51 INFO Periodic measurement report received from UE 4987",
+      "10:09:32 WARN MeasReport: serving cell_6 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:10:49 INFO Handover completed cell_6->cell_4 for UE 6456",
+      "10:10:56 INFO Handover completed cell_6->cell_4 for UE 8441",
+      "10:11:29 WARN Serving cell SINR below 3dB for UE 6640 at cell edge of cell_6",
+      "10:11:55 DEBUG scheduler tick ok on cell_6",
+      "10:14:42 DEBUG PM counter collection finished for cell_6",
+      "10:18:18 DEBUG PM counter collection finished for cell_6",
+      "10:20:15 INFO Periodic measurement report received from UE 4133",
+      "10:22:14 INFO Handover completed cell_6->cell_4 for UE 1647",
+      "10:25:08 WARN Serving cell SINR below 3dB for UE 8631 at cell edge of cell_6",
+      "10:28:23 INFO RRC reconfiguration complete for UE 3531",
+      "10:29:42 DEBUG PM counter collection finished for cell_6",
+      "10:37:23 WARN Serving cell SINR below 3dB for UE 2035 at cell edge of cell_6",
+      "10:40:08 DEBUG scheduler tick ok on cell_6",
+      "10:41:43 INFO PDU session modify ok for UE 8329",
+      "10:41:51 DEBUG scheduler tick ok on cell_6",
+      "10:42:30 INFO PDU session modify ok for UE 3642",
+      "10:47:23 WARN Serving cell SINR below 3dB for UE 3209 at cell edge of cell_6",
+      "10:47:45 WARN MeasReport: serving cell_6 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:51:12 DEBUG PM counter collection finished for cell_6",
+      "10:52:25 INFO Periodic measurement report received from UE 4142"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S07",
+    "symptom": "KPI alarm raised on cell_13: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_13",
+    "kpis": {
+      "cell_13": {
+        "ho_exec_sr_pct": 79.4,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 26,
+        "rsrp_avg_dbm": -110,
+        "sinr_dl_avg_db": 2.9,
+        "ul_sinr_avg_db": 11.1,
+        "pusch_bler_pct": 3.8,
+        "phr_avg_db": 13.8,
+        "prb_util_dl_pct": 48
+      },
+      "cell_11": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 20.8,
+        "ul_sinr_avg_db": 14.3,
+        "pusch_bler_pct": 4.4,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 30
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 20.1,
+        "ul_sinr_avg_db": 17.5,
+        "pusch_bler_pct": 3.4,
+        "phr_avg_db": 12.5,
+        "prb_util_dl_pct": 40
+      }
+    },
+    "logs": [
+      "10:06:58 INFO PDU session modify ok for UE 1864",
+      "10:09:16 WARN Serving cell SINR below 3dB for UE 9298 at cell edge of cell_13",
+      "10:09:34 DEBUG scheduler tick ok on cell_13",
+      "10:12:02 INFO RRC reconfiguration complete for UE 4854",
+      "10:15:48 WARN RLF detected for UE 7286, cause=out-of-sync, serving cell_13",
+      "10:21:31 INFO PDU session modify ok for UE 7819",
+      "10:23:03 INFO Handover completed cell_13->cell_11 for UE 8878",
+      "10:25:11 INFO RRC reconfiguration complete for UE 1663",
+      "10:33:57 DEBUG PM counter collection finished for cell_13",
+      "10:34:43 INFO RRC reconfiguration complete for UE 3992",
+      "10:35:53 WARN Serving cell SINR below 3dB for UE 4796 at cell edge of cell_13",
+      "10:42:11 WARN RLF detected for UE 2193, cause=out-of-sync, serving cell_13",
+      "10:42:48 WARN Serving cell SINR below 3dB for UE 9605 at cell edge of cell_13",
+      "10:46:23 WARN Serving cell SINR below 3dB for UE 2629 at cell edge of cell_13",
+      "10:46:47 DEBUG scheduler tick ok on cell_13",
+      "10:47:09 INFO RRC reconfiguration complete for UE 9450",
+      "10:48:32 INFO Periodic measurement report received from UE 3354",
+      "10:50:48 DEBUG PM counter collection finished for cell_13",
+      "10:52:07 WARN RLF detected for UE 8997, cause=out-of-sync, serving cell_13",
+      "10:52:39 INFO Handover completed cell_13->cell_11 for UE 5080",
+      "10:52:41 DEBUG PM counter collection finished for cell_13",
+      "10:53:37 INFO Handover completed cell_13->cell_11 for UE 5381",
+      "10:55:06 INFO PDU session modify ok for UE 3740"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S41",
+    "symptom": "Users report dropped calls around cell_1. Diagnose the problem.",
+    "serving_cell": "cell_1",
+    "kpis": {
+      "cell_1": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 70.0,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 19.9,
+        "ul_sinr_avg_db": 15.4,
+        "pusch_bler_pct": 3.5,
+        "phr_avg_db": 9.3,
+        "prb_util_dl_pct": 48
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 21.5,
+        "ul_sinr_avg_db": 16.1,
+        "pusch_bler_pct": 1.7,
+        "phr_avg_db": 13.6,
+        "prb_util_dl_pct": 40
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 17.9,
+        "ul_sinr_avg_db": 11.2,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 11.9,
+        "prb_util_dl_pct": 35
+      }
+    },
+    "logs": [
+      "10:14:35 DEBUG PM counter collection finished for cell_1",
+      "10:19:42 DEBUG PM counter collection finished for cell_1",
+      "10:22:04 DEBUG scheduler tick ok on cell_1",
+      "10:24:31 DEBUG PM counter collection finished for cell_1",
+      "10:25:44 ERROR Xn setup failure toward cell_16: transport network layer unreachable",
+      "10:28:21 INFO PDU session modify ok for UE 2537",
+      "10:31:19 INFO RRC reconfiguration complete for UE 3405",
+      "10:33:24 INFO Handover completed cell_1->cell_9 for UE 5693",
+      "10:34:21 DEBUG scheduler tick ok on cell_1",
+      "10:35:14 INFO RRC reconfiguration complete for UE 1885",
+      "10:39:31 ERROR Xn setup failure toward cell_16: transport network layer unreachable",
+      "10:42:40 DEBUG PM counter collection finished for cell_1",
+      "10:44:53 INFO Periodic measurement report received from UE 3498",
+      "10:45:30 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:49:18 INFO Periodic measurement report received from UE 4073",
+      "10:51:24 INFO Handover completed cell_1->cell_9 for UE 6665",
+      "10:53:11 ERROR Xn setup failure toward cell_16: transport network layer unreachable",
+      "10:57:25 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S51",
+    "symptom": "KPI alarm raised on cell_4: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_4",
+    "kpis": {
+      "cell_4": {
+        "ho_exec_sr_pct": 83.4,
+        "ho_prep_sr_pct": 98.5,
+        "rlf_per_hour": 14,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 19.6,
+        "ul_sinr_avg_db": 1.7,
+        "pusch_bler_pct": 16.2,
+        "phr_avg_db": -3.8,
+        "prb_util_dl_pct": 53
+      },
+      "cell_14": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 15.7,
+        "ul_sinr_avg_db": 11.8,
+        "pusch_bler_pct": 2.7,
+        "phr_avg_db": 8.9,
+        "prb_util_dl_pct": 38
+      },
+      "cell_18": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 20.6,
+        "ul_sinr_avg_db": 12.2,
+        "pusch_bler_pct": 2.7,
+        "phr_avg_db": 16.3,
+        "prb_util_dl_pct": 31
+      }
+    },
+    "logs": [
+      "10:08:54 INFO Periodic measurement report received from UE 4866",
+      "10:09:36 DEBUG PM counter collection finished for cell_4",
+      "10:09:37 INFO Periodic measurement report received from UE 1370",
+      "10:11:14 DEBUG PM counter collection finished for cell_4",
+      "10:15:05 WARN PUSCH BLER above 15% on cell_4, UL power headroom negative",
+      "10:22:07 DEBUG PM counter collection finished for cell_4",
+      "10:23:38 INFO PDU session modify ok for UE 5616",
+      "10:24:30 WARN UE 1891 at max Tx power (PHR<0), PUSCH SINR=1.3dB on cell_4",
+      "10:26:41 INFO Handover completed cell_4->cell_14 for UE 7002",
+      "10:28:58 WARN UE 9900 at max Tx power (PHR<0), PUSCH SINR=1.3dB on cell_4",
+      "10:32:26 ERROR RLF cause=UL sync loss for UE 1359, serving cell_4, DL RSRP normal",
+      "10:39:47 WARN UE 9694 at max Tx power (PHR<0), PUSCH SINR=1.3dB on cell_4",
+      "10:42:18 INFO Periodic measurement report received from UE 4968",
+      "10:42:30 WARN PUSCH BLER above 15% on cell_4, UL power headroom negative",
+      "10:42:37 DEBUG scheduler tick ok on cell_4",
+      "10:46:36 INFO Handover completed cell_4->cell_14 for UE 7215",
+      "10:53:15 WARN UE 1583 at max Tx power (PHR<0), PUSCH SINR=1.3dB on cell_4",
+      "10:54:40 INFO Periodic measurement report received from UE 4037",
+      "10:57:45 INFO Periodic measurement report received from UE 4993",
+      "10:58:33 DEBUG scheduler tick ok on cell_4"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S27",
+    "symptom": "Handover failures have increased on cell_2 in the last hour. What is the root cause?",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 82.4,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 28,
+        "rsrp_avg_dbm": -94,
+        "sinr_dl_avg_db": 14.8,
+        "ul_sinr_avg_db": 16.2,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 53
+      },
+      "cell_17": {
+        "ho_exec_sr_pct": 98.5,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 19.4,
+        "ul_sinr_avg_db": 17.1,
+        "pusch_bler_pct": 3.7,
+        "phr_avg_db": 15.2,
+        "prb_util_dl_pct": 35
+      },
+      "cell_12": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 14.7,
+        "ul_sinr_avg_db": 13.2,
+        "pusch_bler_pct": 1.9,
+        "phr_avg_db": 12.0,
+        "prb_util_dl_pct": 32
+      }
+    },
+    "logs": [
+      "10:02:33 DEBUG PM counter collection finished for cell_2",
+      "10:04:39 INFO Handover completed cell_2->cell_17 for UE 2922",
+      "10:12:31 INFO Handover completed cell_2->cell_17 for UE 1452",
+      "10:17:07 INFO RRC reconfiguration complete for UE 7345",
+      "10:19:10 INFO Periodic measurement report received from UE 7805",
+      "10:20:07 ERROR T310 expired before HO command, UE 1084 context released on cell_2",
+      "10:20:25 ERROR T310 expired before HO command, UE 9925 context released on cell_2",
+      "10:20:55 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-114dBm",
+      "10:29:35 INFO PDU session modify ok for UE 2332",
+      "10:35:04 ERROR T310 expired before HO command, UE 6926 context released on cell_2",
+      "10:36:40 INFO Handover completed cell_2->cell_17 for UE 6087",
+      "10:39:37 INFO PDU session modify ok for UE 6465",
+      "10:41:29 INFO RRC reconfiguration complete for UE 4434",
+      "10:45:16 ERROR T310 expired before HO command, UE 3643 context released on cell_2",
+      "10:45:16 DEBUG PM counter collection finished for cell_2",
+      "10:45:59 INFO Handover completed cell_2->cell_17 for UE 7250",
+      "10:46:30 DEBUG PM counter collection finished for cell_2",
+      "10:46:40 INFO RRC reconfiguration complete for UE 2078",
+      "10:47:44 INFO RRC reconfiguration complete for UE 1323",
+      "10:57:47 DEBUG PM counter collection finished for cell_2",
+      "10:59:56 ERROR T310 expired before HO command, UE 4690 context released on cell_2"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S14",
+    "symptom": "Users report dropped calls around cell_4. Diagnose the problem.",
+    "serving_cell": "cell_4",
+    "kpis": {
+      "cell_4": {
+        "ho_exec_sr_pct": 85.9,
+        "ho_prep_sr_pct": 68.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 19.1,
+        "ul_sinr_avg_db": 17.0,
+        "pusch_bler_pct": 3.3,
+        "phr_avg_db": 10.9,
+        "prb_util_dl_pct": 37
+      },
+      "cell_5": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 14.6,
+        "ul_sinr_avg_db": 13.8,
+        "pusch_bler_pct": 4.5,
+        "phr_avg_db": 12.5,
+        "prb_util_dl_pct": 40
+      },
+      "cell_15": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 98.9,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 21.0,
+        "ul_sinr_avg_db": 14.7,
+        "pusch_bler_pct": 3.9,
+        "phr_avg_db": 15.3,
+        "prb_util_dl_pct": 31
+      }
+    },
+    "logs": [
+      "10:00:31 INFO RRC reconfiguration complete for UE 5750",
+      "10:04:51 INFO Periodic measurement report received from UE 4439",
+      "10:05:31 INFO PDU session modify ok for UE 7614",
+      "10:08:58 INFO PDU session modify ok for UE 6137",
+      "10:12:35 INFO Handover completed cell_4->cell_5 for UE 5641",
+      "10:14:41 ERROR HO prep failed: target PCI 686 not found in NRT of cell_4",
+      "10:14:52 INFO Periodic measurement report received from UE 3760",
+      "10:17:52 WARN ANR: unknown PCI 686 reported in MeasReport by UE 4660, no neighbor relation",
+      "10:20:04 ERROR HO prep failed: target PCI 686 not found in NRT of cell_4",
+      "10:24:20 DEBUG PM counter collection finished for cell_4",
+      "10:25:19 WARN ANR: unknown PCI 686 reported in MeasReport by UE 7968, no neighbor relation",
+      "10:28:32 DEBUG scheduler tick ok on cell_4",
+      "10:34:23 INFO Handover completed cell_4->cell_5 for UE 1126",
+      "10:34:58 INFO PDU session modify ok for UE 5924",
+      "10:35:48 ERROR HO prep failed: target PCI 686 not found in NRT of cell_4",
+      "10:45:44 ERROR HO prep failed: target PCI 686 not found in NRT of cell_4",
+      "10:51:11 WARN ANR: unknown PCI 686 reported in MeasReport by UE 1884, no neighbor relation",
+      "10:51:21 INFO PDU session modify ok for UE 3601",
+      "10:52:43 ERROR HO prep failed: target PCI 686 not found in NRT of cell_4",
+      "10:58:36 INFO Periodic measurement report received from UE 4636"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S39",
+    "symptom": "KPI alarm raised on cell_12: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_12",
+    "kpis": {
+      "cell_12": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 80.6,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 21.4,
+        "ul_sinr_avg_db": 10.9,
+        "pusch_bler_pct": 1.4,
+        "phr_avg_db": 14.3,
+        "prb_util_dl_pct": 39
+      },
+      "cell_11": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.9,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 20.5,
+        "ul_sinr_avg_db": 10.9,
+        "pusch_bler_pct": 5.0,
+        "phr_avg_db": 9.0,
+        "prb_util_dl_pct": 92
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 21.9,
+        "ul_sinr_avg_db": 12.1,
+        "pusch_bler_pct": 3.7,
+        "phr_avg_db": 10.5,
+        "prb_util_dl_pct": 36
+      }
+    },
+    "logs": [
+      "10:00:03 INFO PDU session modify ok for UE 6693",
+      "10:00:09 INFO Handover completed cell_12->cell_11 for UE 7593",
+      "10:00:51 DEBUG PM counter collection finished for cell_12",
+      "10:03:25 INFO Handover completed cell_12->cell_11 for UE 7453",
+      "10:08:49 ERROR HO prep rejected by cell_11: cause=radio-resources-not-available",
+      "10:09:36 INFO Periodic measurement report received from UE 4859",
+      "10:11:08 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:23:23 ERROR HO prep rejected by cell_11: cause=radio-resources-not-available",
+      "10:24:23 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:26:33 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:37:19 INFO RRC reconfiguration complete for UE 3965",
+      "10:37:47 DEBUG scheduler tick ok on cell_12",
+      "10:37:51 DEBUG scheduler tick ok on cell_12",
+      "10:39:14 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:45:05 INFO Periodic measurement report received from UE 6760",
+      "10:46:14 INFO Handover completed cell_12->cell_11 for UE 4125",
+      "10:46:30 INFO PDU session modify ok for UE 4865",
+      "10:52:15 INFO RRC reconfiguration complete for UE 5930"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S03",
+    "symptom": "Handover failures have increased on cell_13 in the last hour. What is the root cause?",
+    "serving_cell": "cell_13",
+    "kpis": {
+      "cell_13": {
+        "ho_exec_sr_pct": 82.4,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 27,
+        "rsrp_avg_dbm": -116,
+        "sinr_dl_avg_db": 5.1,
+        "ul_sinr_avg_db": 17.2,
+        "pusch_bler_pct": 4.2,
+        "phr_avg_db": 14.1,
+        "prb_util_dl_pct": 56
+      },
+      "cell_1": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 20.9,
+        "ul_sinr_avg_db": 12.9,
+        "pusch_bler_pct": 3.7,
+        "phr_avg_db": 12.2,
+        "prb_util_dl_pct": 47
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 17.1,
+        "ul_sinr_avg_db": 16.4,
+        "pusch_bler_pct": 4.4,
+        "phr_avg_db": 11.8,
+        "prb_util_dl_pct": 41
+      }
+    },
+    "logs": [
+      "10:01:21 DEBUG scheduler tick ok on cell_13",
+      "10:02:55 INFO PDU session modify ok for UE 8705",
+      "10:12:26 WARN RLF detected for UE 3020, cause=out-of-sync, serving cell_13",
+      "10:15:04 INFO Periodic measurement report received from UE 1526",
+      "10:16:57 WARN RLF detected for UE 8462, cause=out-of-sync, serving cell_13",
+      "10:21:53 DEBUG PM counter collection finished for cell_13",
+      "10:22:14 DEBUG scheduler tick ok on cell_13",
+      "10:23:01 WARN Serving cell SINR below 3dB for UE 1799 at cell edge of cell_13",
+      "10:30:24 WARN MeasReport: serving cell_13 RSRP=-111dBm below -108dBm, no target above A3 threshold",
+      "10:31:38 DEBUG PM counter collection finished for cell_13",
+      "10:32:35 DEBUG scheduler tick ok on cell_13",
+      "10:34:12 WARN Serving cell SINR below 3dB for UE 5505 at cell edge of cell_13",
+      "10:36:59 INFO RRC reconfiguration complete for UE 3319",
+      "10:38:25 WARN MeasReport: serving cell_13 RSRP=-111dBm below -108dBm, no target above A3 threshold",
+      "10:41:03 INFO PDU session modify ok for UE 5730",
+      "10:45:04 INFO RRC reconfiguration complete for UE 9133",
+      "10:48:10 INFO Handover completed cell_13->cell_1 for UE 1228",
+      "10:50:05 INFO Periodic measurement report received from UE 3160",
+      "10:57:24 WARN RLF detected for UE 8196, cause=out-of-sync, serving cell_13"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S10",
+    "symptom": "Handover failures have increased on cell_18 in the last hour. What is the root cause?",
+    "serving_cell": "cell_18",
+    "kpis": {
+      "cell_18": {
+        "ho_exec_sr_pct": 79.4,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 39,
+        "rsrp_avg_dbm": -118,
+        "sinr_dl_avg_db": 3.0,
+        "ul_sinr_avg_db": 14.7,
+        "pusch_bler_pct": 4.0,
+        "phr_avg_db": 17.6,
+        "prb_util_dl_pct": 56
+      },
+      "cell_17": {
+        "ho_exec_sr_pct": 98.9,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 15.1,
+        "ul_sinr_avg_db": 11.8,
+        "pusch_bler_pct": 4.0,
+        "phr_avg_db": 15.9,
+        "prb_util_dl_pct": 57
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 18.2,
+        "ul_sinr_avg_db": 11.9,
+        "pusch_bler_pct": 4.6,
+        "phr_avg_db": 9.2,
+        "prb_util_dl_pct": 44
+      }
+    },
+    "logs": [
+      "10:00:37 DEBUG PM counter collection finished for cell_18",
+      "10:04:55 WARN Serving cell SINR below 3dB for UE 8144 at cell edge of cell_18",
+      "10:06:17 DEBUG PM counter collection finished for cell_18",
+      "10:06:32 WARN Serving cell SINR below 3dB for UE 8387 at cell edge of cell_18",
+      "10:07:56 INFO Handover completed cell_18->cell_17 for UE 9111",
+      "10:09:39 WARN Serving cell SINR below 3dB for UE 5342 at cell edge of cell_18",
+      "10:10:16 INFO Periodic measurement report received from UE 3922",
+      "10:12:39 WARN MeasReport: serving cell_18 RSRP=-115dBm below -108dBm, no target above A3 threshold",
+      "10:14:07 INFO RRC reconfiguration complete for UE 8423",
+      "10:15:45 INFO Handover completed cell_18->cell_17 for UE 6872",
+      "10:16:24 INFO PDU session modify ok for UE 3939",
+      "10:18:15 INFO RRC reconfiguration complete for UE 9635",
+      "10:22:03 WARN Serving cell SINR below 3dB for UE 9269 at cell edge of cell_18",
+      "10:22:48 WARN MeasReport: serving cell_18 RSRP=-115dBm below -108dBm, no target above A3 threshold",
+      "10:25:26 INFO Periodic measurement report received from UE 3038",
+      "10:25:32 INFO RRC reconfiguration complete for UE 8376",
+      "10:30:06 WARN Admission control reject on cell_17, DL PRB utilization 92%",
+      "10:30:32 DEBUG scheduler tick ok on cell_18",
+      "10:32:45 INFO Handover completed cell_18->cell_17 for UE 6747",
+      "10:37:10 WARN MeasReport: serving cell_18 RSRP=-115dBm below -108dBm, no target above A3 threshold",
+      "10:43:29 WARN RLF detected for UE 1399, cause=out-of-sync, serving cell_18",
+      "10:44:16 DEBUG scheduler tick ok on cell_18",
+      "10:47:56 INFO Handover completed cell_18->cell_17 for UE 5169",
+      "10:58:04 ERROR HO prep rejected by cell_17: cause=radio-resources-not-available"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S33",
+    "symptom": "Users report dropped calls around cell_17. Diagnose the problem.",
+    "serving_cell": "cell_17",
+    "kpis": {
+      "cell_17": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 78.0,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 14.2,
+        "ul_sinr_avg_db": 16.0,
+        "pusch_bler_pct": 4.7,
+        "phr_avg_db": 13.8,
+        "prb_util_dl_pct": 30
+      },
+      "cell_11": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 98.9,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 15.5,
+        "ul_sinr_avg_db": 11.2,
+        "pusch_bler_pct": 1.2,
+        "phr_avg_db": 11.4,
+        "prb_util_dl_pct": 98
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 21.9,
+        "ul_sinr_avg_db": 11.2,
+        "pusch_bler_pct": 1.5,
+        "phr_avg_db": 14.8,
+        "prb_util_dl_pct": 59
+      }
+    },
+    "logs": [
+      "10:04:22 ERROR HO prep rejected by cell_11: cause=radio-resources-not-available",
+      "10:04:48 INFO RRC reconfiguration complete for UE 6829",
+      "10:09:43 INFO Periodic measurement report received from UE 2642",
+      "10:12:17 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:12:56 DEBUG PM counter collection finished for cell_17",
+      "10:20:13 INFO RRC reconfiguration complete for UE 5416",
+      "10:20:34 DEBUG scheduler tick ok on cell_17",
+      "10:20:44 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:23:34 DEBUG scheduler tick ok on cell_17",
+      "10:24:12 INFO RRC reconfiguration complete for UE 6239",
+      "10:26:36 INFO Periodic measurement report received from UE 2647",
+      "10:27:21 DEBUG PM counter collection finished for cell_17",
+      "10:32:25 INFO Handover completed cell_17->cell_11 for UE 9970",
+      "10:33:32 INFO PDU session modify ok for UE 3903",
+      "10:35:45 DEBUG scheduler tick ok on cell_17",
+      "10:36:10 ERROR HO prep rejected by cell_11: cause=radio-resources-not-available",
+      "10:41:05 INFO Periodic measurement report received from UE 8187",
+      "10:42:17 ERROR HO prep rejected by cell_11: cause=radio-resources-not-available",
+      "10:46:41 DEBUG scheduler tick ok on cell_17",
+      "10:47:20 DEBUG scheduler tick ok on cell_17",
+      "10:48:57 ERROR HO prep rejected by cell_11: cause=radio-resources-not-available",
+      "10:49:08 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:53:41 WARN Admission control reject on cell_11, DL PRB utilization 93%",
+      "10:59:18 DEBUG PM counter collection finished for cell_17"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S23",
+    "symptom": "KPI alarm raised on cell_9: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_9",
+    "kpis": {
+      "cell_9": {
+        "ho_exec_sr_pct": 87.5,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 32,
+        "rsrp_avg_dbm": -96,
+        "sinr_dl_avg_db": 20.7,
+        "ul_sinr_avg_db": 15.1,
+        "pusch_bler_pct": 3.9,
+        "phr_avg_db": 14.1,
+        "prb_util_dl_pct": 25
+      },
+      "cell_4": {
+        "ho_exec_sr_pct": 99.3,
+        "ho_prep_sr_pct": 98.5,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 17.4,
+        "ul_sinr_avg_db": 12.8,
+        "pusch_bler_pct": 1.6,
+        "phr_avg_db": 8.8,
+        "prb_util_dl_pct": 44
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 19.7,
+        "ul_sinr_avg_db": 12.0,
+        "pusch_bler_pct": 5.0,
+        "phr_avg_db": 14.8,
+        "prb_util_dl_pct": 34
+      }
+    },
+    "logs": [
+      "10:04:05 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-111dBm",
+      "10:08:55 INFO RRC reconfiguration complete for UE 2029",
+      "10:15:05 INFO Handover completed cell_9->cell_4 for UE 7386",
+      "10:19:24 ERROR T310 expired before HO command, UE 1189 context released on cell_9",
+      "10:24:13 INFO RRC reconfiguration complete for UE 4485",
+      "10:25:21 INFO PDU session modify ok for UE 1194",
+      "10:29:18 DEBUG scheduler tick ok on cell_9",
+      "10:36:27 ERROR T310 expired before HO command, UE 6931 context released on cell_9",
+      "10:40:31 DEBUG PM counter collection finished for cell_9",
+      "10:41:59 DEBUG PM counter collection finished for cell_9",
+      "10:45:13 INFO PDU session modify ok for UE 9016",
+      "10:48:19 DEBUG PM counter collection finished for cell_9",
+      "10:48:54 ERROR T310 expired before HO command, UE 9824 context released on cell_9",
+      "10:48:59 INFO Handover completed cell_9->cell_4 for UE 1715",
+      "10:49:31 DEBUG PM counter collection finished for cell_9",
+      "10:49:43 DEBUG scheduler tick ok on cell_9",
+      "10:51:55 INFO Periodic measurement report received from UE 1158",
+      "10:54:07 INFO RRC reconfiguration complete for UE 4599",
+      "10:54:28 INFO Handover completed cell_9->cell_4 for UE 4388",
+      "10:55:12 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-111dBm",
+      "10:57:10 INFO Periodic measurement report received from UE 7285",
+      "10:58:52 DEBUG PM counter collection finished for cell_9",
+      "10:59:10 INFO Periodic measurement report received from UE 8021"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S54",
+    "symptom": "Users report dropped calls around cell_17. Diagnose the problem.",
+    "serving_cell": "cell_17",
+    "kpis": {
+      "cell_17": {
+        "ho_exec_sr_pct": 84.7,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 15,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 14.7,
+        "ul_sinr_avg_db": 2.4,
+        "pusch_bler_pct": 15.6,
+        "phr_avg_db": -2.2,
+        "prb_util_dl_pct": 25
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 98.5,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 21.7,
+        "ul_sinr_avg_db": 11.2,
+        "pusch_bler_pct": 4.6,
+        "phr_avg_db": 15.5,
+        "prb_util_dl_pct": 46
+      },
+      "cell_20": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 21.0,
+        "ul_sinr_avg_db": 17.0,
+        "pusch_bler_pct": 3.5,
+        "phr_avg_db": 14.5,
+        "prb_util_dl_pct": 29
+      }
+    },
+    "logs": [
+      "10:04:16 INFO Periodic measurement report received from UE 6520",
+      "10:09:02 INFO Periodic measurement report received from UE 8983",
+      "10:10:27 DEBUG scheduler tick ok on cell_17",
+      "10:15:45 INFO Handover completed cell_17->cell_19 for UE 5766",
+      "10:16:43 INFO RRC reconfiguration complete for UE 4419",
+      "10:16:48 WARN UE 3497 at max Tx power (PHR<0), PUSCH SINR=1.0dB on cell_17",
+      "10:17:33 INFO PDU session modify ok for UE 8956",
+      "10:18:53 WARN UE 6461 at max Tx power (PHR<0), PUSCH SINR=1.0dB on cell_17",
+      "10:19:17 DEBUG scheduler tick ok on cell_17",
+      "10:20:23 INFO RRC reconfiguration complete for UE 8727",
+      "10:30:52 DEBUG scheduler tick ok on cell_17",
+      "10:32:03 INFO Handover completed cell_17->cell_19 for UE 5399",
+      "10:36:32 INFO RRC reconfiguration complete for UE 4274",
+      "10:37:17 INFO RRC reconfiguration complete for UE 4601",
+      "10:41:25 INFO Periodic measurement report received from UE 1161",
+      "10:41:27 WARN UE 4403 at max Tx power (PHR<0), PUSCH SINR=1.0dB on cell_17",
+      "10:46:08 ERROR RLF cause=UL sync loss for UE 3467, serving cell_17, DL RSRP normal",
+      "10:51:12 WARN PUSCH BLER above 15% on cell_17, UL power headroom negative",
+      "10:54:10 INFO PDU session modify ok for UE 1523",
+      "10:57:13 DEBUG scheduler tick ok on cell_17"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S53",
+    "symptom": "Users report dropped calls around cell_19. Diagnose the problem.",
+    "serving_cell": "cell_19",
+    "kpis": {
+      "cell_19": {
+        "ho_exec_sr_pct": 85.1,
+        "ho_prep_sr_pct": 99.0,
+        "rlf_per_hour": 25,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 18.8,
+        "ul_sinr_avg_db": 3.4,
+        "pusch_bler_pct": 19.4,
+        "phr_avg_db": -1.2,
+        "prb_util_dl_pct": 38
+      },
+      "cell_11": {
+        "ho_exec_sr_pct": 98.9,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 17.4,
+        "ul_sinr_avg_db": 16.0,
+        "pusch_bler_pct": 3.5,
+        "phr_avg_db": 12.8,
+        "prb_util_dl_pct": 48
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 16.9,
+        "ul_sinr_avg_db": 15.2,
+        "pusch_bler_pct": 1.9,
+        "phr_avg_db": 17.0,
+        "prb_util_dl_pct": 31
+      }
+    },
+    "logs": [
+      "10:00:20 INFO Handover completed cell_19->cell_11 for UE 7136",
+      "10:04:06 DEBUG scheduler tick ok on cell_19",
+      "10:12:56 INFO RRC reconfiguration complete for UE 5697",
+      "10:13:58 ERROR RLF cause=UL sync loss for UE 1774, serving cell_19, DL RSRP normal",
+      "10:14:07 INFO Handover completed cell_19->cell_11 for UE 1948",
+      "10:14:27 INFO Periodic measurement report received from UE 9716",
+      "10:16:47 DEBUG PM counter collection finished for cell_19",
+      "10:18:11 ERROR RLF cause=UL sync loss for UE 6184, serving cell_19, DL RSRP normal",
+      "10:18:32 DEBUG PM counter collection finished for cell_19",
+      "10:18:50 INFO RRC reconfiguration complete for UE 8571",
+      "10:24:50 INFO Handover completed cell_19->cell_11 for UE 1606",
+      "10:26:10 INFO RRC reconfiguration complete for UE 7765",
+      "10:27:22 INFO RRC reconfiguration complete for UE 1500",
+      "10:28:23 ERROR RLF cause=UL sync loss for UE 6087, serving cell_19, DL RSRP normal",
+      "10:32:09 WARN UE 5529 at max Tx power (PHR<0), PUSCH SINR=3.2dB on cell_19",
+      "10:32:52 INFO Periodic measurement report received from UE 4934",
+      "10:34:17 INFO PDU session modify ok for UE 7136",
+      "10:37:40 WARN UE 1167 at max Tx power (PHR<0), PUSCH SINR=3.2dB on cell_19",
+      "10:42:53 INFO Periodic measurement report received from UE 5213",
+      "10:43:16 DEBUG scheduler tick ok on cell_19",
+      "10:45:20 DEBUG PM counter collection finished for cell_19",
+      "10:52:06 DEBUG PM counter collection finished for cell_19",
+      "10:57:08 WARN PUSCH BLER above 15% on cell_19, UL power headroom negative",
+      "10:58:31 WARN UE 3508 at max Tx power (PHR<0), PUSCH SINR=3.2dB on cell_19"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S44",
+    "symptom": "KPI alarm raised on cell_2: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 43.5,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 21.6,
+        "ul_sinr_avg_db": 15.1,
+        "pusch_bler_pct": 3.8,
+        "phr_avg_db": 17.1,
+        "prb_util_dl_pct": 33
+      },
+      "cell_15": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 14.5,
+        "ul_sinr_avg_db": 13.6,
+        "pusch_bler_pct": 1.0,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 53
+      },
+      "cell_12": {
+        "ho_exec_sr_pct": 98.5,
+        "ho_prep_sr_pct": 99.9,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 20.3,
+        "ul_sinr_avg_db": 11.3,
+        "pusch_bler_pct": 3.8,
+        "phr_avg_db": 12.5,
+        "prb_util_dl_pct": 60
+      }
+    },
+    "logs": [
+      "10:02:17 INFO PDU session modify ok for UE 5889",
+      "10:03:55 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_15",
+      "10:04:55 INFO PDU session modify ok for UE 6722",
+      "10:06:15 DEBUG scheduler tick ok on cell_2",
+      "10:08:26 INFO RRC reconfiguration complete for UE 3520",
+      "10:11:08 INFO Handover completed cell_2->cell_15 for UE 8739",
+      "10:11:18 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:12:59 DEBUG PM counter collection finished for cell_2",
+      "10:14:36 ERROR SCTP association to cell_15 timeout, Xn link down",
+      "10:15:51 INFO Periodic measurement report received from UE 3046",
+      "10:16:05 DEBUG PM counter collection finished for cell_2",
+      "10:16:40 DEBUG scheduler tick ok on cell_2",
+      "10:19:16 DEBUG PM counter collection finished for cell_2",
+      "10:27:41 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_15",
+      "10:29:01 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:37:41 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:40:11 INFO Periodic measurement report received from UE 8817",
+      "10:43:33 DEBUG PM counter collection finished for cell_2",
+      "10:45:43 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:47:34 INFO Handover completed cell_2->cell_15 for UE 3127",
+      "10:50:58 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:55:13 DEBUG PM counter collection finished for cell_2",
+      "10:56:03 INFO PDU session modify ok for UE 3305",
+      "10:58:03 DEBUG scheduler tick ok on cell_2",
+      "10:59:17 INFO Periodic measurement report received from UE 7195"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S43",
+    "symptom": "Users report dropped calls around cell_14. Diagnose the problem.",
+    "serving_cell": "cell_14",
+    "kpis": {
+      "cell_14": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 44.7,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 14.3,
+        "ul_sinr_avg_db": 14.0,
+        "pusch_bler_pct": 1.7,
+        "phr_avg_db": 9.3,
+        "prb_util_dl_pct": 45
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 17.4,
+        "ul_sinr_avg_db": 13.2,
+        "pusch_bler_pct": 4.3,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 46
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 20.4,
+        "ul_sinr_avg_db": 14.3,
+        "pusch_bler_pct": 2.1,
+        "phr_avg_db": 12.9,
+        "prb_util_dl_pct": 48
+      }
+    },
+    "logs": [
+      "10:00:04 DEBUG scheduler tick ok on cell_14",
+      "10:01:05 INFO PDU session modify ok for UE 3146",
+      "10:01:56 INFO PDU session modify ok for UE 9843",
+      "10:02:32 DEBUG PM counter collection finished for cell_14",
+      "10:06:33 DEBUG PM counter collection finished for cell_14",
+      "10:11:41 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:16:17 DEBUG scheduler tick ok on cell_14",
+      "10:16:48 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:26:41 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:27:47 INFO PDU session modify ok for UE 6397",
+      "10:31:06 ERROR SCTP association to cell_9 timeout, Xn link down",
+      "10:32:11 DEBUG PM counter collection finished for cell_14",
+      "10:35:12 ERROR Xn setup failure toward cell_19: transport network layer unreachable",
+      "10:35:13 DEBUG scheduler tick ok on cell_14",
+      "10:38:04 INFO PDU session modify ok for UE 2766",
+      "10:39:28 DEBUG scheduler tick ok on cell_14",
+      "10:40:01 ERROR SCTP association to cell_9 timeout, Xn link down",
+      "10:40:14 INFO RRC reconfiguration complete for UE 6744",
+      "10:41:45 INFO Periodic measurement report received from UE 8988",
+      "10:45:32 INFO Periodic measurement report received from UE 3259",
+      "10:45:34 DEBUG PM counter collection finished for cell_14",
+      "10:47:00 ERROR SCTP association to cell_9 timeout, Xn link down",
+      "10:50:51 INFO PDU session modify ok for UE 6337",
+      "10:51:22 ERROR SCTP association to cell_9 timeout, Xn link down",
+      "10:53:52 DEBUG PM counter collection finished for cell_14",
+      "10:58:08 INFO Handover completed cell_14->cell_9 for UE 9441"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S18",
+    "symptom": "Handover failures have increased on cell_10 in the last hour. What is the root cause?",
+    "serving_cell": "cell_10",
+    "kpis": {
+      "cell_10": {
+        "ho_exec_sr_pct": 87.8,
+        "ho_prep_sr_pct": 63.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 21.7,
+        "ul_sinr_avg_db": 10.9,
+        "pusch_bler_pct": 4.7,
+        "phr_avg_db": 11.5,
+        "prb_util_dl_pct": 37
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 99.0,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 19.1,
+        "ul_sinr_avg_db": 16.0,
+        "pusch_bler_pct": 4.3,
+        "phr_avg_db": 11.8,
+        "prb_util_dl_pct": 30
+      },
+      "cell_13": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 98.9,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 19.8,
+        "ul_sinr_avg_db": 16.5,
+        "pusch_bler_pct": 4.7,
+        "phr_avg_db": 13.5,
+        "prb_util_dl_pct": 26
+      }
+    },
+    "logs": [
+      "10:04:13 WARN ANR: unknown PCI 480 reported in MeasReport by UE 1048, no neighbor relation",
+      "10:06:35 DEBUG scheduler tick ok on cell_10",
+      "10:09:17 WARN ANR: unknown PCI 480 reported in MeasReport by UE 6344, no neighbor relation",
+      "10:09:34 INFO Periodic measurement report received from UE 7150",
+      "10:12:34 WARN ANR: unknown PCI 480 reported in MeasReport by UE 5585, no neighbor relation",
+      "10:15:14 DEBUG PM counter collection finished for cell_10",
+      "10:18:33 DEBUG PM counter collection finished for cell_10",
+      "10:19:56 INFO PDU session modify ok for UE 5254",
+      "10:21:00 WARN ANR: unknown PCI 480 reported in MeasReport by UE 2529, no neighbor relation",
+      "10:21:05 DEBUG PM counter collection finished for cell_10",
+      "10:24:33 INFO Handover completed cell_10->cell_2 for UE 6419",
+      "10:27:09 ERROR HO prep failed: target PCI 480 not found in NRT of cell_10",
+      "10:30:35 WARN ANR: unknown PCI 480 reported in MeasReport by UE 6447, no neighbor relation",
+      "10:30:55 WARN ANR: unknown PCI 480 reported in MeasReport by UE 1763, no neighbor relation",
+      "10:35:12 INFO Handover completed cell_10->cell_2 for UE 4144",
+      "10:36:38 INFO Periodic measurement report received from UE 2404",
+      "10:38:44 INFO PDU session modify ok for UE 2162",
+      "10:41:36 INFO RRC reconfiguration complete for UE 7208",
+      "10:43:21 DEBUG scheduler tick ok on cell_10",
+      "10:44:58 INFO RRC reconfiguration complete for UE 2705",
+      "10:51:01 INFO PDU session modify ok for UE 3493",
+      "10:51:40 WARN ANR: unknown PCI 480 reported in MeasReport by UE 4022, no neighbor relation",
+      "10:55:10 INFO RRC reconfiguration complete for UE 1866",
+      "10:55:45 DEBUG scheduler tick ok on cell_10",
+      "10:57:49 INFO Handover completed cell_10->cell_2 for UE 9081"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S46",
+    "symptom": "KPI alarm raised on cell_5: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_5",
+    "kpis": {
+      "cell_5": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 41.4,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 15.7,
+        "ul_sinr_avg_db": 16.1,
+        "pusch_bler_pct": 2.6,
+        "phr_avg_db": 8.8,
+        "prb_util_dl_pct": 31
+      },
+      "cell_8": {
+        "ho_exec_sr_pct": 99.3,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 18.5,
+        "ul_sinr_avg_db": 17.5,
+        "pusch_bler_pct": 4.6,
+        "phr_avg_db": 11.1,
+        "prb_util_dl_pct": 54
+      },
+      "cell_7": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 21.7,
+        "ul_sinr_avg_db": 12.5,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 12.2,
+        "prb_util_dl_pct": 55
+      }
+    },
+    "logs": [
+      "10:01:27 ERROR SCTP association to cell_8 timeout, Xn link down",
+      "10:04:58 INFO Handover completed cell_5->cell_8 for UE 3612",
+      "10:09:51 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_8",
+      "10:09:52 ERROR SCTP association to cell_8 timeout, Xn link down",
+      "10:12:47 INFO PDU session modify ok for UE 9337",
+      "10:13:17 ERROR Xn setup failure toward cell_7: transport network layer unreachable",
+      "10:13:59 ERROR Xn setup failure toward cell_7: transport network layer unreachable",
+      "10:18:35 INFO PDU session modify ok for UE 9418",
+      "10:20:24 ERROR Xn setup failure toward cell_7: transport network layer unreachable",
+      "10:31:03 INFO RRC reconfiguration complete for UE 9004",
+      "10:32:21 INFO Handover completed cell_5->cell_8 for UE 2975",
+      "10:35:16 INFO Periodic measurement report received from UE 9177",
+      "10:39:02 INFO Periodic measurement report received from UE 8142",
+      "10:39:04 INFO Handover completed cell_5->cell_8 for UE 9031",
+      "10:46:54 INFO PDU session modify ok for UE 8131",
+      "10:47:09 DEBUG scheduler tick ok on cell_5",
+      "10:47:10 DEBUG scheduler tick ok on cell_5",
+      "10:48:21 INFO Handover completed cell_5->cell_8 for UE 6361",
+      "10:50:43 INFO Periodic measurement report received from UE 2868",
+      "10:55:12 DEBUG PM counter collection finished for cell_5",
+      "10:56:56 INFO RRC reconfiguration complete for UE 6226"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S22",
+    "symptom": "Handover failures have increased on cell_20 in the last hour. What is the root cause?",
+    "serving_cell": "cell_20",
+    "kpis": {
+      "cell_20": {
+        "ho_exec_sr_pct": 82.0,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 41,
+        "rsrp_avg_dbm": -98,
+        "sinr_dl_avg_db": 14.6,
+        "ul_sinr_avg_db": 15.1,
+        "pusch_bler_pct": 1.2,
+        "phr_avg_db": 11.8,
+        "prb_util_dl_pct": 52
+      },
+      "cell_11": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 17.0,
+        "ul_sinr_avg_db": 14.8,
+        "pusch_bler_pct": 3.3,
+        "phr_avg_db": 15.7,
+        "prb_util_dl_pct": 36
+      },
+      "cell_13": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 98.9,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 14.5,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 3.7,
+        "phr_avg_db": 13.9,
+        "prb_util_dl_pct": 41
+      }
+    },
+    "logs": [
+      "10:00:51 INFO Periodic measurement report received from UE 9840",
+      "10:03:21 ERROR T310 expired before HO command, UE 3955 context released on cell_20",
+      "10:05:04 INFO PDU session modify ok for UE 8879",
+      "10:09:30 INFO PDU session modify ok for UE 5203",
+      "10:15:42 ERROR T310 expired before HO command, UE 4767 context released on cell_20",
+      "10:18:12 ERROR T310 expired before HO command, UE 2980 context released on cell_20",
+      "10:22:04 INFO Handover completed cell_20->cell_11 for UE 1015",
+      "10:24:09 INFO PDU session modify ok for UE 5018",
+      "10:25:35 DEBUG scheduler tick ok on cell_20",
+      "10:28:09 DEBUG scheduler tick ok on cell_20",
+      "10:33:55 INFO Periodic measurement report received from UE 1732",
+      "10:35:54 ERROR T310 expired before HO command, UE 4852 context released on cell_20",
+      "10:36:43 INFO Handover completed cell_20->cell_11 for UE 8378",
+      "10:37:10 INFO PDU session modify ok for UE 1815",
+      "10:39:26 DEBUG PM counter collection finished for cell_20",
+      "10:43:04 INFO PDU session modify ok for UE 5521",
+      "10:45:12 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-112dBm",
+      "10:49:01 DEBUG scheduler tick ok on cell_20",
+      "10:49:05 ERROR T310 expired before HO command, UE 7910 context released on cell_20",
+      "10:49:07 DEBUG scheduler tick ok on cell_20",
+      "10:57:58 INFO RRC reconfiguration complete for UE 3359"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S38",
+    "symptom": "Handover failures have increased on cell_15 in the last hour. What is the root cause?",
+    "serving_cell": "cell_15",
+    "kpis": {
+      "cell_15": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 76.8,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 15.7,
+        "ul_sinr_avg_db": 12.3,
+        "pusch_bler_pct": 1.3,
+        "phr_avg_db": 14.0,
+        "prb_util_dl_pct": 53
+      },
+      "cell_13": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 20.0,
+        "ul_sinr_avg_db": 16.3,
+        "pusch_bler_pct": 3.1,
+        "phr_avg_db": 11.2,
+        "prb_util_dl_pct": 93
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 15.4,
+        "ul_sinr_avg_db": 15.7,
+        "pusch_bler_pct": 1.2,
+        "phr_avg_db": 9.7,
+        "prb_util_dl_pct": 31
+      }
+    },
+    "logs": [
+      "10:00:01 INFO RRC reconfiguration complete for UE 6045",
+      "10:02:11 WARN Admission control reject on cell_13, DL PRB utilization 96%",
+      "10:04:44 INFO RRC reconfiguration complete for UE 4689",
+      "10:11:04 WARN Admission control reject on cell_13, DL PRB utilization 96%",
+      "10:13:04 INFO Periodic measurement report received from UE 7381",
+      "10:13:14 INFO RRC reconfiguration complete for UE 3893",
+      "10:17:53 DEBUG scheduler tick ok on cell_15",
+      "10:24:09 DEBUG scheduler tick ok on cell_15",
+      "10:24:36 WARN Admission control reject on cell_13, DL PRB utilization 96%",
+      "10:24:44 INFO PDU session modify ok for UE 6509",
+      "10:30:34 INFO RRC reconfiguration complete for UE 8356",
+      "10:31:04 INFO RRC reconfiguration complete for UE 3140",
+      "10:34:33 WARN Admission control reject on cell_13, DL PRB utilization 96%",
+      "10:36:13 DEBUG PM counter collection finished for cell_15",
+      "10:39:11 INFO PDU session modify ok for UE 5944",
+      "10:42:16 INFO Handover completed cell_15->cell_13 for UE 6210",
+      "10:48:34 INFO PDU session modify ok for UE 4382",
+      "10:50:46 DEBUG scheduler tick ok on cell_15",
+      "10:51:47 ERROR HO prep rejected by cell_13: cause=radio-resources-not-available",
+      "10:53:39 DEBUG scheduler tick ok on cell_15",
+      "10:57:59 INFO Handover completed cell_15->cell_13 for UE 4057"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S47",
+    "symptom": "KPI alarm raised on cell_9: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_9",
+    "kpis": {
+      "cell_9": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 59.9,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 21.9,
+        "ul_sinr_avg_db": 13.6,
+        "pusch_bler_pct": 4.3,
+        "phr_avg_db": 15.4,
+        "prb_util_dl_pct": 29
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 21.8,
+        "ul_sinr_avg_db": 13.7,
+        "pusch_bler_pct": 2.6,
+        "phr_avg_db": 9.9,
+        "prb_util_dl_pct": 37
+      },
+      "cell_12": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 20.2,
+        "ul_sinr_avg_db": 11.4,
+        "pusch_bler_pct": 3.2,
+        "phr_avg_db": 14.5,
+        "prb_util_dl_pct": 34
+      }
+    },
+    "logs": [
+      "10:00:43 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:01:12 INFO RRC reconfiguration complete for UE 1118",
+      "10:02:46 INFO RRC reconfiguration complete for UE 9351",
+      "10:20:40 INFO Periodic measurement report received from UE 7343",
+      "10:20:40 DEBUG scheduler tick ok on cell_9",
+      "10:23:23 INFO Periodic measurement report received from UE 4649",
+      "10:27:10 INFO RRC reconfiguration complete for UE 5858",
+      "10:32:38 ERROR Xn setup failure toward cell_12: transport network layer unreachable",
+      "10:33:21 DEBUG PM counter collection finished for cell_9",
+      "10:34:36 INFO RRC reconfiguration complete for UE 7508",
+      "10:34:42 INFO PDU session modify ok for UE 2800",
+      "10:46:58 ERROR SCTP association to cell_19 timeout, Xn link down",
+      "10:47:06 ERROR SCTP association to cell_19 timeout, Xn link down",
+      "10:48:32 DEBUG scheduler tick ok on cell_9",
+      "10:51:44 INFO Periodic measurement report received from UE 5435",
+      "10:52:57 DEBUG scheduler tick ok on cell_9",
+      "10:56:40 DEBUG scheduler tick ok on cell_9",
+      "10:58:18 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_19",
+      "10:59:07 INFO Periodic measurement report received from UE 1730"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S11",
+    "symptom": "Handover failures have increased on cell_18 in the last hour. What is the root cause?",
+    "serving_cell": "cell_18",
+    "kpis": {
+      "cell_18": {
+        "ho_exec_sr_pct": 85.9,
+        "ho_prep_sr_pct": 64.8,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 19.6,
+        "ul_sinr_avg_db": 15.5,
+        "pusch_bler_pct": 1.0,
+        "phr_avg_db": 17.2,
+        "prb_util_dl_pct": 55
+      },
+      "cell_8": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 16.8,
+        "ul_sinr_avg_db": 16.4,
+        "pusch_bler_pct": 3.4,
+        "phr_avg_db": 17.7,
+        "prb_util_dl_pct": 25
+      },
+      "cell_14": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.0,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 14.2,
+        "ul_sinr_avg_db": 11.1,
+        "pusch_bler_pct": 2.1,
+        "phr_avg_db": 12.9,
+        "prb_util_dl_pct": 35
+      }
+    },
+    "logs": [
+      "10:01:21 INFO RRC reconfiguration complete for UE 2080",
+      "10:02:22 INFO PDU session modify ok for UE 9466",
+      "10:02:46 WARN ANR: unknown PCI 381 reported in MeasReport by UE 7118, no neighbor relation",
+      "10:03:46 WARN ANR: unknown PCI 381 reported in MeasReport by UE 4918, no neighbor relation",
+      "10:04:56 INFO Handover completed cell_18->cell_8 for UE 9364",
+      "10:10:07 WARN ANR: unknown PCI 381 reported in MeasReport by UE 8607, no neighbor relation",
+      "10:13:10 INFO Handover completed cell_18->cell_8 for UE 4639",
+      "10:13:14 DEBUG scheduler tick ok on cell_18",
+      "10:15:38 WARN ANR: unknown PCI 381 reported in MeasReport by UE 2686, no neighbor relation",
+      "10:16:52 INFO RRC reconfiguration complete for UE 3500",
+      "10:19:05 INFO Periodic measurement report received from UE 8707",
+      "10:19:35 DEBUG PM counter collection finished for cell_18",
+      "10:19:52 INFO PDU session modify ok for UE 4141",
+      "10:21:53 INFO Periodic measurement report received from UE 3070",
+      "10:22:08 INFO RRC reconfiguration complete for UE 7427",
+      "10:32:47 DEBUG scheduler tick ok on cell_18",
+      "10:35:15 INFO Handover completed cell_18->cell_8 for UE 4498",
+      "10:35:20 WARN ANR: unknown PCI 381 reported in MeasReport by UE 9099, no neighbor relation",
+      "10:36:43 DEBUG PM counter collection finished for cell_18",
+      "10:36:47 DEBUG scheduler tick ok on cell_18",
+      "10:42:46 DEBUG PM counter collection finished for cell_18",
+      "10:52:27 ERROR HO prep failed: target PCI 381 not found in NRT of cell_18",
+      "10:55:00 INFO PDU session modify ok for UE 4257",
+      "10:56:25 DEBUG scheduler tick ok on cell_18",
+      "10:57:41 WARN ANR: unknown PCI 381 reported in MeasReport by UE 3150, no neighbor relation"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S13",
+    "symptom": "Users report dropped calls around cell_20. Diagnose the problem.",
+    "serving_cell": "cell_20",
+    "kpis": {
+      "cell_20": {
+        "ho_exec_sr_pct": 86.6,
+        "ho_prep_sr_pct": 71.7,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 20.0,
+        "ul_sinr_avg_db": 13.5,
+        "pusch_bler_pct": 1.1,
+        "phr_avg_db": 13.1,
+        "prb_util_dl_pct": 55
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 21.6,
+        "ul_sinr_avg_db": 15.9,
+        "pusch_bler_pct": 3.3,
+        "phr_avg_db": 14.7,
+        "prb_util_dl_pct": 40
+      },
+      "cell_13": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 19.9,
+        "ul_sinr_avg_db": 16.8,
+        "pusch_bler_pct": 3.6,
+        "phr_avg_db": 8.7,
+        "prb_util_dl_pct": 53
+      }
+    },
+    "logs": [
+      "10:01:14 INFO RRC reconfiguration complete for UE 2473",
+      "10:04:17 INFO PDU session modify ok for UE 8321",
+      "10:05:02 INFO RRC reconfiguration complete for UE 1903",
+      "10:05:16 DEBUG PM counter collection finished for cell_20",
+      "10:05:23 ERROR HO prep failed: target PCI 65 not found in NRT of cell_20",
+      "10:06:52 INFO Handover completed cell_20->cell_2 for UE 8759",
+      "10:08:49 INFO RRC reconfiguration complete for UE 3684",
+      "10:18:44 INFO RRC reconfiguration complete for UE 9214",
+      "10:23:41 INFO PDU session modify ok for UE 3501",
+      "10:25:06 ERROR HO prep failed: target PCI 65 not found in NRT of cell_20",
+      "10:26:40 INFO RRC reconfiguration complete for UE 4226",
+      "10:27:03 ERROR HO prep failed: target PCI 65 not found in NRT of cell_20",
+      "10:28:03 DEBUG PM counter collection finished for cell_20",
+      "10:31:48 WARN ANR: unknown PCI 65 reported in MeasReport by UE 4429, no neighbor relation",
+      "10:33:08 INFO PDU session modify ok for UE 1634",
+      "10:35:43 DEBUG PM counter collection finished for cell_20",
+      "10:37:30 INFO PDU session modify ok for UE 4336",
+      "10:37:56 INFO Periodic measurement report received from UE 8157",
+      "10:42:31 INFO Handover completed cell_20->cell_2 for UE 5957",
+      "10:44:28 ERROR HO prep failed: target PCI 65 not found in NRT of cell_20",
+      "10:48:21 ERROR HO prep failed: target PCI 65 not found in NRT of cell_20",
+      "10:48:58 INFO PDU session modify ok for UE 1171",
+      "10:57:06 INFO Handover completed cell_20->cell_2 for UE 2768",
+      "10:58:22 INFO Periodic measurement report received from UE 5255"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S57",
+    "symptom": "Users report dropped calls around cell_10. Diagnose the problem.",
+    "serving_cell": "cell_10",
+    "kpis": {
+      "cell_10": {
+        "ho_exec_sr_pct": 87.4,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 15,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 17.0,
+        "ul_sinr_avg_db": 2.2,
+        "pusch_bler_pct": 22.2,
+        "phr_avg_db": -5.4,
+        "prb_util_dl_pct": 48
+      },
+      "cell_5": {
+        "ho_exec_sr_pct": 99.3,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 14.0,
+        "ul_sinr_avg_db": 16.5,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 9.2,
+        "prb_util_dl_pct": 31
+      },
+      "cell_15": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 15.4,
+        "ul_sinr_avg_db": 10.2,
+        "pusch_bler_pct": 1.3,
+        "phr_avg_db": 10.3,
+        "prb_util_dl_pct": 42
+      }
+    },
+    "logs": [
+      "10:04:23 INFO Handover completed cell_10->cell_5 for UE 1278",
+      "10:05:03 ERROR RLF cause=UL sync loss for UE 9709, serving cell_10, DL RSRP normal",
+      "10:05:48 DEBUG scheduler tick ok on cell_10",
+      "10:05:52 INFO PDU session modify ok for UE 1058",
+      "10:07:16 WARN UE 2102 at max Tx power (PHR<0), PUSCH SINR=4.9dB on cell_10",
+      "10:12:58 ERROR RLF cause=UL sync loss for UE 9603, serving cell_10, DL RSRP normal",
+      "10:18:08 INFO Periodic measurement report received from UE 8997",
+      "10:20:33 INFO Handover completed cell_10->cell_5 for UE 6791",
+      "10:21:07 INFO Handover completed cell_10->cell_5 for UE 4989",
+      "10:29:40 DEBUG scheduler tick ok on cell_10",
+      "10:32:56 INFO Periodic measurement report received from UE 9514",
+      "10:35:10 DEBUG PM counter collection finished for cell_10",
+      "10:35:47 DEBUG scheduler tick ok on cell_10",
+      "10:36:19 INFO Periodic measurement report received from UE 9807",
+      "10:38:32 INFO PDU session modify ok for UE 1034",
+      "10:46:03 INFO PDU session modify ok for UE 1351",
+      "10:47:57 INFO Handover completed cell_10->cell_5 for UE 9354",
+      "10:49:12 WARN PUSCH BLER above 15% on cell_10, UL power headroom negative",
+      "10:50:21 INFO PDU session modify ok for UE 7839",
+      "10:52:33 INFO Handover completed cell_10->cell_5 for UE 6007",
+      "10:54:12 ERROR RLF cause=UL sync loss for UE 9059, serving cell_10, DL RSRP normal",
+      "10:56:05 INFO PDU session modify ok for UE 3209",
+      "10:58:00 INFO Periodic measurement report received from UE 2539"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S17",
+    "symptom": "Handover failures have increased on cell_9 in the last hour. What is the root cause?",
+    "serving_cell": "cell_9",
+    "kpis": {
+      "cell_9": {
+        "ho_exec_sr_pct": 89.4,
+        "ho_prep_sr_pct": 74.1,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 19.5,
+        "ul_sinr_avg_db": 16.1,
+        "pusch_bler_pct": 2.4,
+        "phr_avg_db": 15.4,
+        "prb_util_dl_pct": 47
+      },
+      "cell_7": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 18.9,
+        "ul_sinr_avg_db": 10.8,
+        "pusch_bler_pct": 2.5,
+        "phr_avg_db": 9.4,
+        "prb_util_dl_pct": 43
+      },
+      "cell_17": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 16.3,
+        "ul_sinr_avg_db": 11.0,
+        "pusch_bler_pct": 4.8,
+        "phr_avg_db": 11.6,
+        "prb_util_dl_pct": 48
+      }
+    },
+    "logs": [
+      "10:01:13 INFO Periodic measurement report received from UE 7378",
+      "10:02:28 ERROR HO prep failed: target PCI 719 not found in NRT of cell_9",
+      "10:03:42 DEBUG PM counter collection finished for cell_9",
+      "10:04:34 INFO RRC reconfiguration complete for UE 1290",
+      "10:08:26 INFO Handover completed cell_9->cell_7 for UE 5467",
+      "10:09:31 DEBUG scheduler tick ok on cell_9",
+      "10:14:17 INFO RRC reconfiguration complete for UE 9476",
+      "10:15:35 DEBUG PM counter collection finished for cell_9",
+      "10:16:09 DEBUG PM counter collection finished for cell_9",
+      "10:16:46 WARN ANR: unknown PCI 719 reported in MeasReport by UE 6541, no neighbor relation",
+      "10:21:58 ERROR HO prep failed: target PCI 719 not found in NRT of cell_9",
+      "10:23:32 WARN ANR: unknown PCI 719 reported in MeasReport by UE 4016, no neighbor relation",
+      "10:23:56 INFO Periodic measurement report received from UE 3528",
+      "10:27:59 INFO RRC reconfiguration complete for UE 8441",
+      "10:32:38 ERROR HO prep failed: target PCI 719 not found in NRT of cell_9",
+      "10:37:37 INFO Handover completed cell_9->cell_7 for UE 2451",
+      "10:41:43 INFO Periodic measurement report received from UE 2062",
+      "10:42:57 INFO RRC reconfiguration complete for UE 3722",
+      "10:46:16 INFO Handover completed cell_9->cell_7 for UE 8194",
+      "10:49:44 WARN ANR: unknown PCI 719 reported in MeasReport by UE 4853, no neighbor relation",
+      "10:52:30 INFO Handover completed cell_9->cell_7 for UE 4102",
+      "10:52:37 INFO Handover completed cell_9->cell_7 for UE 9780",
+      "10:55:57 INFO Handover completed cell_9->cell_7 for UE 9589"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S60",
+    "symptom": "KPI alarm raised on cell_3: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_3",
+    "kpis": {
+      "cell_3": {
+        "ho_exec_sr_pct": 88.7,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 10,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 20.5,
+        "ul_sinr_avg_db": 3.9,
+        "pusch_bler_pct": 16.1,
+        "phr_avg_db": -5.3,
+        "prb_util_dl_pct": 45
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 14.9,
+        "ul_sinr_avg_db": 16.2,
+        "pusch_bler_pct": 1.2,
+        "phr_avg_db": 10.3,
+        "prb_util_dl_pct": 46
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 21.3,
+        "ul_sinr_avg_db": 15.5,
+        "pusch_bler_pct": 3.4,
+        "phr_avg_db": 10.1,
+        "prb_util_dl_pct": 57
+      }
+    },
+    "logs": [
+      "10:02:11 INFO Periodic measurement report received from UE 2470",
+      "10:03:24 ERROR RLF cause=UL sync loss for UE 3783, serving cell_3, DL RSRP normal",
+      "10:03:57 INFO Periodic measurement report received from UE 7180",
+      "10:07:24 INFO RRC reconfiguration complete for UE 8259",
+      "10:07:24 INFO PDU session modify ok for UE 9860",
+      "10:13:17 DEBUG scheduler tick ok on cell_3",
+      "10:13:19 WARN PUSCH BLER above 15% on cell_3, UL power headroom negative",
+      "10:15:00 WARN UE 8708 at max Tx power (PHR<0), PUSCH SINR=3.4dB on cell_3",
+      "10:22:58 WARN UE 4798 at max Tx power (PHR<0), PUSCH SINR=3.4dB on cell_3",
+      "10:25:26 ERROR RLF cause=UL sync loss for UE 6266, serving cell_3, DL RSRP normal",
+      "10:28:00 INFO RRC reconfiguration complete for UE 9212",
+      "10:30:24 INFO Periodic measurement report received from UE 2052",
+      "10:32:53 DEBUG scheduler tick ok on cell_3",
+      "10:38:11 DEBUG PM counter collection finished for cell_3",
+      "10:41:15 DEBUG scheduler tick ok on cell_3",
+      "10:44:59 ERROR SCTP association to cell_16 timeout, Xn link down",
+      "10:46:27 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_16",
+      "10:47:30 INFO RRC reconfiguration complete for UE 5131",
+      "10:47:49 INFO Handover completed cell_3->cell_16 for UE 4663",
+      "10:55:28 INFO RRC reconfiguration complete for UE 9409",
+      "10:58:56 INFO PDU session modify ok for UE 5080"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S21",
+    "symptom": "KPI alarm raised on cell_4: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_4",
+    "kpis": {
+      "cell_4": {
+        "ho_exec_sr_pct": 84.4,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 39,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 17.0,
+        "ul_sinr_avg_db": 10.6,
+        "pusch_bler_pct": 4.4,
+        "phr_avg_db": 10.9,
+        "prb_util_dl_pct": 50
+      },
+      "cell_10": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 21.1,
+        "ul_sinr_avg_db": 16.0,
+        "pusch_bler_pct": 4.0,
+        "phr_avg_db": 17.8,
+        "prb_util_dl_pct": 52
+      },
+      "cell_5": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 17.8,
+        "ul_sinr_avg_db": 15.9,
+        "pusch_bler_pct": 2.9,
+        "phr_avg_db": 10.2,
+        "prb_util_dl_pct": 53
+      }
+    },
+    "logs": [
+      "10:03:42 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-118dBm",
+      "10:04:53 INFO Handover completed cell_4->cell_10 for UE 5808",
+      "10:05:09 INFO RRC reconfiguration complete for UE 4823",
+      "10:07:20 INFO Periodic measurement report received from UE 4524",
+      "10:09:59 ERROR T310 expired before HO command, UE 9257 context released on cell_4",
+      "10:11:50 INFO PDU session modify ok for UE 2237",
+      "10:13:07 INFO PDU session modify ok for UE 6140",
+      "10:18:23 INFO RRC reconfiguration complete for UE 2919",
+      "10:25:15 INFO Periodic measurement report received from UE 8221",
+      "10:31:27 ERROR T310 expired before HO command, UE 6250 context released on cell_4",
+      "10:33:56 INFO Handover completed cell_4->cell_10 for UE 2526",
+      "10:43:11 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-118dBm",
+      "10:49:07 INFO RRC reconfiguration complete for UE 1569",
+      "10:50:04 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-118dBm",
+      "10:50:18 INFO RRC reconfiguration complete for UE 6538",
+      "10:50:41 DEBUG PM counter collection finished for cell_4",
+      "10:51:09 DEBUG PM counter collection finished for cell_4",
+      "10:55:50 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-118dBm",
+      "10:57:37 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-118dBm",
+      "10:59:25 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-118dBm"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S30",
+    "symptom": "KPI alarm raised on cell_9: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_9",
+    "kpis": {
+      "cell_9": {
+        "ho_exec_sr_pct": 79.5,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 32,
+        "rsrp_avg_dbm": -98,
+        "sinr_dl_avg_db": 15.2,
+        "ul_sinr_avg_db": 17.5,
+        "pusch_bler_pct": 2.5,
+        "phr_avg_db": 15.2,
+        "prb_util_dl_pct": 48
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 98.9,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 16.3,
+        "ul_sinr_avg_db": 16.3,
+        "pusch_bler_pct": 2.1,
+        "phr_avg_db": 8.7,
+        "prb_util_dl_pct": 44
+      },
+      "cell_18": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 18.6,
+        "ul_sinr_avg_db": 12.5,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 15.1,
+        "prb_util_dl_pct": 32
+      }
+    },
+    "logs": [
+      "10:01:06 INFO Handover completed cell_9->cell_19 for UE 9707",
+      "10:02:35 DEBUG scheduler tick ok on cell_9",
+      "10:13:18 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-111dBm",
+      "10:14:17 DEBUG scheduler tick ok on cell_9",
+      "10:19:44 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-111dBm",
+      "10:19:57 INFO RRC reconfiguration complete for UE 6718",
+      "10:21:11 INFO Periodic measurement report received from UE 1256",
+      "10:24:08 ERROR T310 expired before HO command, UE 1045 context released on cell_9",
+      "10:28:57 DEBUG scheduler tick ok on cell_9",
+      "10:34:32 DEBUG PM counter collection finished for cell_9",
+      "10:36:37 WARN RLF detected for UE 2919, cause=out-of-sync, serving cell_9",
+      "10:36:56 WARN MeasReport: serving cell_9 RSRP=-111dBm below -108dBm, no target above A3 threshold",
+      "10:40:59 ERROR T310 expired before HO command, UE 8541 context released on cell_9",
+      "10:42:07 DEBUG scheduler tick ok on cell_9",
+      "10:43:21 INFO PDU session modify ok for UE 3819",
+      "10:47:51 INFO RRC reconfiguration complete for UE 9164",
+      "10:48:52 INFO RRC reconfiguration complete for UE 5649",
+      "10:51:09 ERROR T310 expired before HO command, UE 8960 context released on cell_9",
+      "10:55:23 DEBUG PM counter collection finished for cell_9",
+      "10:57:14 INFO PDU session modify ok for UE 2216"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S20",
+    "symptom": "Users report dropped calls around cell_18. Diagnose the problem.",
+    "serving_cell": "cell_18",
+    "kpis": {
+      "cell_18": {
+        "ho_exec_sr_pct": 86.1,
+        "ho_prep_sr_pct": 75.0,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 19.2,
+        "ul_sinr_avg_db": 15.1,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 17.7,
+        "prb_util_dl_pct": 51
+      },
+      "cell_12": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 18.9,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 3.1,
+        "phr_avg_db": 11.6,
+        "prb_util_dl_pct": 46
+      },
+      "cell_5": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 16.6,
+        "ul_sinr_avg_db": 12.2,
+        "pusch_bler_pct": 4.0,
+        "phr_avg_db": 11.8,
+        "prb_util_dl_pct": 37
+      }
+    },
+    "logs": [
+      "10:04:47 DEBUG scheduler tick ok on cell_18",
+      "10:05:40 INFO Periodic measurement report received from UE 6858",
+      "10:05:50 INFO RRC reconfiguration complete for UE 3187",
+      "10:06:55 INFO PDU session modify ok for UE 7102",
+      "10:11:05 WARN ANR: unknown PCI 32 reported in MeasReport by UE 3202, no neighbor relation",
+      "10:15:25 DEBUG PM counter collection finished for cell_18",
+      "10:16:23 INFO RRC reconfiguration complete for UE 6376",
+      "10:17:16 WARN Serving cell SINR below 3dB for UE 8782 at cell edge of cell_18",
+      "10:18:00 INFO Periodic measurement report received from UE 3892",
+      "10:18:42 DEBUG scheduler tick ok on cell_18",
+      "10:27:58 INFO RRC reconfiguration complete for UE 4752",
+      "10:32:17 INFO Periodic measurement report received from UE 6317",
+      "10:33:26 INFO Handover completed cell_18->cell_12 for UE 2815",
+      "10:34:17 INFO Handover completed cell_18->cell_12 for UE 5353",
+      "10:36:02 WARN ANR: unknown PCI 32 reported in MeasReport by UE 5465, no neighbor relation",
+      "10:39:08 WARN RLF detected for UE 4334, cause=out-of-sync, serving cell_18",
+      "10:39:51 INFO Periodic measurement report received from UE 8314",
+      "10:40:38 INFO PDU session modify ok for UE 8113",
+      "10:40:48 INFO PDU session modify ok for UE 4526",
+      "10:44:00 INFO PDU session modify ok for UE 6315",
+      "10:45:09 ERROR HO prep failed: target PCI 32 not found in NRT of cell_18",
+      "10:50:32 WARN ANR: unknown PCI 32 reported in MeasReport by UE 7816, no neighbor relation",
+      "10:53:17 INFO RRC reconfiguration complete for UE 1286",
+      "10:59:26 ERROR HO prep failed: target PCI 32 not found in NRT of cell_18",
+      "10:59:36 INFO PDU session modify ok for UE 1041"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S05",
+    "symptom": "Handover failures have increased on cell_3 in the last hour. What is the root cause?",
+    "serving_cell": "cell_3",
+    "kpis": {
+      "cell_3": {
+        "ho_exec_sr_pct": 74.4,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 40,
+        "rsrp_avg_dbm": -108,
+        "sinr_dl_avg_db": 2.4,
+        "ul_sinr_avg_db": 12.6,
+        "pusch_bler_pct": 1.4,
+        "phr_avg_db": 10.2,
+        "prb_util_dl_pct": 52
+      },
+      "cell_7": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 15.2,
+        "ul_sinr_avg_db": 13.7,
+        "pusch_bler_pct": 1.4,
+        "phr_avg_db": 14.7,
+        "prb_util_dl_pct": 47
+      },
+      "cell_13": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 15.9,
+        "ul_sinr_avg_db": 13.5,
+        "pusch_bler_pct": 3.7,
+        "phr_avg_db": 8.9,
+        "prb_util_dl_pct": 25
+      }
+    },
+    "logs": [
+      "10:01:49 INFO PDU session modify ok for UE 5265",
+      "10:05:27 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:06:52 INFO Periodic measurement report received from UE 3234",
+      "10:11:09 INFO PDU session modify ok for UE 7345",
+      "10:13:05 INFO Periodic measurement report received from UE 4364",
+      "10:13:33 INFO Periodic measurement report received from UE 7538",
+      "10:18:27 INFO PDU session modify ok for UE 2986",
+      "10:19:20 INFO Periodic measurement report received from UE 9923",
+      "10:21:23 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:24:57 INFO RRC reconfiguration complete for UE 4014",
+      "10:29:10 DEBUG scheduler tick ok on cell_3",
+      "10:30:21 WARN Admission control reject on cell_7, DL PRB utilization 93%",
+      "10:34:34 WARN Serving cell SINR below 3dB for UE 1047 at cell edge of cell_3",
+      "10:41:38 ERROR HO prep rejected by cell_7: cause=radio-resources-not-available",
+      "10:43:20 DEBUG PM counter collection finished for cell_3",
+      "10:44:08 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:48:46 INFO PDU session modify ok for UE 2661",
+      "10:49:07 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:49:18 INFO PDU session modify ok for UE 6869",
+      "10:49:44 DEBUG PM counter collection finished for cell_3",
+      "10:50:04 INFO RRC reconfiguration complete for UE 9749",
+      "10:52:10 INFO Handover completed cell_3->cell_7 for UE 3643",
+      "10:53:15 DEBUG scheduler tick ok on cell_3",
+      "10:54:38 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S45",
+    "symptom": "Users report dropped calls around cell_4. Diagnose the problem.",
+    "serving_cell": "cell_4",
+    "kpis": {
+      "cell_4": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 43.1,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 16.6,
+        "ul_sinr_avg_db": 14.8,
+        "pusch_bler_pct": 3.8,
+        "phr_avg_db": 8.1,
+        "prb_util_dl_pct": 48
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 21.7,
+        "ul_sinr_avg_db": 15.2,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 17.9,
+        "prb_util_dl_pct": 56
+      },
+      "cell_3": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -90,
+        "sinr_dl_avg_db": 20.0,
+        "ul_sinr_avg_db": 12.9,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 15.8,
+        "prb_util_dl_pct": 33
+      }
+    },
+    "logs": [
+      "10:03:47 ERROR HO prep failed: target PCI 778 not found in NRT of cell_4",
+      "10:04:40 INFO Handover completed cell_4->cell_6 for UE 8641",
+      "10:11:05 ERROR SCTP association to cell_6 timeout, Xn link down",
+      "10:15:44 INFO RRC reconfiguration complete for UE 4961",
+      "10:20:49 DEBUG scheduler tick ok on cell_4",
+      "10:21:01 ERROR SCTP association to cell_6 timeout, Xn link down",
+      "10:22:17 INFO RRC reconfiguration complete for UE 1031",
+      "10:28:08 INFO Handover completed cell_4->cell_6 for UE 1581",
+      "10:31:15 INFO Periodic measurement report received from UE 3558",
+      "10:32:41 INFO PDU session modify ok for UE 6568",
+      "10:36:38 INFO Periodic measurement report received from UE 5850",
+      "10:39:39 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_6",
+      "10:40:38 INFO PDU session modify ok for UE 3757",
+      "10:41:31 ERROR SCTP association to cell_6 timeout, Xn link down",
+      "10:42:24 DEBUG scheduler tick ok on cell_4",
+      "10:46:00 DEBUG scheduler tick ok on cell_4",
+      "10:46:45 INFO Handover completed cell_4->cell_6 for UE 5745",
+      "10:50:17 INFO RRC reconfiguration complete for UE 9809",
+      "10:50:25 DEBUG PM counter collection finished for cell_4",
+      "10:51:09 INFO RRC reconfiguration complete for UE 2096",
+      "10:51:36 INFO PDU session modify ok for UE 6535",
+      "10:52:40 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_6",
+      "10:53:45 INFO Periodic measurement report received from UE 8931",
+      "10:55:33 WARN ANR: unknown PCI 778 reported in MeasReport by UE 1500, no neighbor relation",
+      "10:58:23 DEBUG scheduler tick ok on cell_4"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S58",
+    "symptom": "Handover failures have increased on cell_11 in the last hour. What is the root cause?",
+    "serving_cell": "cell_11",
+    "kpis": {
+      "cell_11": {
+        "ho_exec_sr_pct": 86.0,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 20,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 17.2,
+        "ul_sinr_avg_db": 4.4,
+        "pusch_bler_pct": 26.8,
+        "phr_avg_db": -4.6,
+        "prb_util_dl_pct": 25
+      },
+      "cell_18": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 16.4,
+        "ul_sinr_avg_db": 11.2,
+        "pusch_bler_pct": 1.0,
+        "phr_avg_db": 8.0,
+        "prb_util_dl_pct": 42
+      },
+      "cell_3": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 20.0,
+        "ul_sinr_avg_db": 12.5,
+        "pusch_bler_pct": 2.4,
+        "phr_avg_db": 13.3,
+        "prb_util_dl_pct": 29
+      }
+    },
+    "logs": [
+      "10:14:07 INFO PDU session modify ok for UE 9374",
+      "10:14:09 INFO Periodic measurement report received from UE 6474",
+      "10:14:26 WARN UE 9715 at max Tx power (PHR<0), PUSCH SINR=1.4dB on cell_11",
+      "10:15:14 INFO PDU session modify ok for UE 5102",
+      "10:15:58 INFO Handover completed cell_11->cell_18 for UE 5181",
+      "10:20:28 WARN PUSCH BLER above 15% on cell_11, UL power headroom negative",
+      "10:22:19 INFO RRC reconfiguration complete for UE 4458",
+      "10:22:43 INFO RRC reconfiguration complete for UE 8257",
+      "10:24:03 ERROR RLF cause=UL sync loss for UE 5096, serving cell_11, DL RSRP normal",
+      "10:27:33 DEBUG scheduler tick ok on cell_11",
+      "10:28:21 INFO Periodic measurement report received from UE 9406",
+      "10:28:52 INFO PDU session modify ok for UE 4714",
+      "10:33:29 ERROR RLF cause=UL sync loss for UE 9674, serving cell_11, DL RSRP normal",
+      "10:34:38 WARN UE 2972 at max Tx power (PHR<0), PUSCH SINR=1.4dB on cell_11",
+      "10:39:00 DEBUG PM counter collection finished for cell_11",
+      "10:39:05 ERROR RLF cause=UL sync loss for UE 4252, serving cell_11, DL RSRP normal",
+      "10:39:31 INFO Periodic measurement report received from UE 3288",
+      "10:41:41 INFO Periodic measurement report received from UE 2422",
+      "10:49:32 INFO PDU session modify ok for UE 4405",
+      "10:55:03 INFO RRC reconfiguration complete for UE 5577",
+      "10:55:10 INFO Periodic measurement report received from UE 9307",
+      "10:55:58 DEBUG PM counter collection finished for cell_11"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S48",
+    "symptom": "Users report dropped calls around cell_12. Diagnose the problem.",
+    "serving_cell": "cell_12",
+    "kpis": {
+      "cell_12": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 45.5,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 16.4,
+        "ul_sinr_avg_db": 10.6,
+        "pusch_bler_pct": 3.1,
+        "phr_avg_db": 8.3,
+        "prb_util_dl_pct": 38
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 20.2,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 16.5,
+        "prb_util_dl_pct": 48
+      },
+      "cell_10": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 19.1,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 2.2,
+        "phr_avg_db": 12.8,
+        "prb_util_dl_pct": 33
+      }
+    },
+    "logs": [
+      "10:02:40 INFO RRC reconfiguration complete for UE 1014",
+      "10:07:50 INFO RRC reconfiguration complete for UE 7653",
+      "10:08:15 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_16",
+      "10:10:20 INFO RRC reconfiguration complete for UE 7396",
+      "10:18:32 ERROR Xn setup failure toward cell_10: transport network layer unreachable",
+      "10:18:41 INFO Periodic measurement report received from UE 6134",
+      "10:20:36 DEBUG PM counter collection finished for cell_12",
+      "10:24:37 INFO Periodic measurement report received from UE 1573",
+      "10:42:36 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_16",
+      "10:43:03 ERROR Xn setup failure toward cell_10: transport network layer unreachable",
+      "10:46:15 INFO RRC reconfiguration complete for UE 8099",
+      "10:47:35 INFO RRC reconfiguration complete for UE 3125",
+      "10:51:33 ERROR SCTP association to cell_16 timeout, Xn link down",
+      "10:54:55 INFO Periodic measurement report received from UE 3886",
+      "10:54:56 INFO Periodic measurement report received from UE 1612",
+      "10:58:07 INFO PDU session modify ok for UE 9551",
+      "10:58:23 INFO Periodic measurement report received from UE 6917"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S16",
+    "symptom": "Users report dropped calls around cell_10. Diagnose the problem.",
+    "serving_cell": "cell_10",
+    "kpis": {
+      "cell_10": {
+        "ho_exec_sr_pct": 88.6,
+        "ho_prep_sr_pct": 70.7,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 16.5,
+        "ul_sinr_avg_db": 13.7,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 12.9,
+        "prb_util_dl_pct": 34
+      },
+      "cell_18": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 19.4,
+        "ul_sinr_avg_db": 12.9,
+        "pusch_bler_pct": 4.6,
+        "phr_avg_db": 8.5,
+        "prb_util_dl_pct": 25
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.9,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 16.5,
+        "ul_sinr_avg_db": 12.9,
+        "pusch_bler_pct": 4.0,
+        "phr_avg_db": 13.7,
+        "prb_util_dl_pct": 44
+      }
+    },
+    "logs": [
+      "10:01:19 DEBUG PM counter collection finished for cell_10",
+      "10:03:03 WARN ANR: unknown PCI 446 reported in MeasReport by UE 3086, no neighbor relation",
+      "10:03:34 INFO RRC reconfiguration complete for UE 6539",
+      "10:07:54 INFO Periodic measurement report received from UE 3920",
+      "10:09:10 INFO Periodic measurement report received from UE 6990",
+      "10:13:28 INFO RRC reconfiguration complete for UE 8878",
+      "10:18:27 INFO RRC reconfiguration complete for UE 7806",
+      "10:19:23 WARN ANR: unknown PCI 446 reported in MeasReport by UE 5345, no neighbor relation",
+      "10:19:26 INFO Periodic measurement report received from UE 9512",
+      "10:22:55 WARN ANR: unknown PCI 446 reported in MeasReport by UE 9954, no neighbor relation",
+      "10:25:19 DEBUG PM counter collection finished for cell_10",
+      "10:28:00 INFO PDU session modify ok for UE 5028",
+      "10:28:21 WARN ANR: unknown PCI 446 reported in MeasReport by UE 5463, no neighbor relation",
+      "10:38:06 INFO RRC reconfiguration complete for UE 4119",
+      "10:39:26 INFO RRC reconfiguration complete for UE 8513",
+      "10:42:10 INFO PDU session modify ok for UE 9182",
+      "10:42:36 ERROR HO prep failed: target PCI 446 not found in NRT of cell_10",
+      "10:47:22 INFO Periodic measurement report received from UE 6831",
+      "10:48:53 INFO Handover completed cell_10->cell_18 for UE 1516",
+      "10:54:06 INFO Periodic measurement report received from UE 4522",
+      "10:59:02 INFO Periodic measurement report received from UE 6965",
+      "10:59:21 DEBUG scheduler tick ok on cell_10"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S04",
+    "symptom": "KPI alarm raised on cell_3: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_3",
+    "kpis": {
+      "cell_3": {
+        "ho_exec_sr_pct": 81.4,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 19,
+        "rsrp_avg_dbm": -112,
+        "sinr_dl_avg_db": 3.1,
+        "ul_sinr_avg_db": 14.2,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 17.3,
+        "prb_util_dl_pct": 37
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 98.9,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 16.3,
+        "ul_sinr_avg_db": 10.7,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 13.4,
+        "prb_util_dl_pct": 42
+      },
+      "cell_10": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 21.5,
+        "ul_sinr_avg_db": 13.3,
+        "pusch_bler_pct": 4.2,
+        "phr_avg_db": 9.1,
+        "prb_util_dl_pct": 52
+      }
+    },
+    "logs": [
+      "10:01:46 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:07:13 INFO PDU session modify ok for UE 9331",
+      "10:07:41 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:08:36 INFO Periodic measurement report received from UE 2998",
+      "10:14:28 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:19:34 DEBUG PM counter collection finished for cell_3",
+      "10:24:05 DEBUG PM counter collection finished for cell_3",
+      "10:24:45 DEBUG scheduler tick ok on cell_3",
+      "10:26:37 INFO RRC reconfiguration complete for UE 2262",
+      "10:26:39 DEBUG PM counter collection finished for cell_3",
+      "10:26:40 INFO RRC reconfiguration complete for UE 4095",
+      "10:28:16 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:30:22 INFO Handover completed cell_3->cell_9 for UE 9533",
+      "10:31:24 INFO RRC reconfiguration complete for UE 6781",
+      "10:31:48 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:32:28 INFO PDU session modify ok for UE 2750",
+      "10:33:55 DEBUG scheduler tick ok on cell_3",
+      "10:34:51 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:37:40 INFO RRC reconfiguration complete for UE 1285",
+      "10:40:28 INFO PDU session modify ok for UE 6322",
+      "10:45:48 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:53:39 WARN MeasReport: serving cell_3 RSRP=-112dBm below -108dBm, no target above A3 threshold",
+      "10:56:38 INFO Handover completed cell_3->cell_9 for UE 2554"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S31",
+    "symptom": "Handover failures have increased on cell_1 in the last hour. What is the root cause?",
+    "serving_cell": "cell_1",
+    "kpis": {
+      "cell_1": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 81.1,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 16.5,
+        "ul_sinr_avg_db": 13.7,
+        "pusch_bler_pct": 4.2,
+        "phr_avg_db": 10.8,
+        "prb_util_dl_pct": 41
+      },
+      "cell_15": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.0,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 19.4,
+        "ul_sinr_avg_db": 17.6,
+        "pusch_bler_pct": 1.6,
+        "phr_avg_db": 15.9,
+        "prb_util_dl_pct": 97
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 19.3,
+        "ul_sinr_avg_db": 12.7,
+        "pusch_bler_pct": 1.9,
+        "phr_avg_db": 9.8,
+        "prb_util_dl_pct": 44
+      }
+    },
+    "logs": [
+      "10:00:13 INFO RRC reconfiguration complete for UE 1266",
+      "10:01:39 INFO RRC reconfiguration complete for UE 9091",
+      "10:05:50 WARN Admission control reject on cell_15, DL PRB utilization 94%",
+      "10:10:14 INFO PDU session modify ok for UE 5792",
+      "10:12:26 DEBUG scheduler tick ok on cell_1",
+      "10:13:43 INFO RRC reconfiguration complete for UE 1058",
+      "10:14:00 WARN Admission control reject on cell_15, DL PRB utilization 94%",
+      "10:14:16 DEBUG scheduler tick ok on cell_1",
+      "10:17:34 INFO Handover completed cell_1->cell_15 for UE 2004",
+      "10:21:32 ERROR HO prep rejected by cell_15: cause=radio-resources-not-available",
+      "10:23:52 DEBUG PM counter collection finished for cell_1",
+      "10:25:11 DEBUG scheduler tick ok on cell_1",
+      "10:25:49 DEBUG PM counter collection finished for cell_1",
+      "10:29:52 DEBUG scheduler tick ok on cell_1",
+      "10:30:31 INFO RRC reconfiguration complete for UE 6631",
+      "10:31:01 ERROR HO prep rejected by cell_15: cause=radio-resources-not-available",
+      "10:32:44 WARN Admission control reject on cell_15, DL PRB utilization 94%",
+      "10:36:14 WARN Admission control reject on cell_15, DL PRB utilization 94%",
+      "10:37:51 INFO Periodic measurement report received from UE 4933",
+      "10:38:57 INFO Handover completed cell_1->cell_15 for UE 5368",
+      "10:42:33 INFO RRC reconfiguration complete for UE 2211",
+      "10:43:03 INFO RRC reconfiguration complete for UE 2064",
+      "10:43:45 INFO RRC reconfiguration complete for UE 3966"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S35",
+    "symptom": "KPI alarm raised on cell_5: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_5",
+    "kpis": {
+      "cell_5": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 72.2,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 17.0,
+        "ul_sinr_avg_db": 11.3,
+        "pusch_bler_pct": 4.3,
+        "phr_avg_db": 14.3,
+        "prb_util_dl_pct": 35
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 99.0,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 16.7,
+        "ul_sinr_avg_db": 14.8,
+        "pusch_bler_pct": 2.7,
+        "phr_avg_db": 9.4,
+        "prb_util_dl_pct": 94
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.3,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 20.5,
+        "ul_sinr_avg_db": 14.9,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 9.1,
+        "prb_util_dl_pct": 38
+      }
+    },
+    "logs": [
+      "10:00:33 WARN Admission control reject on cell_6, DL PRB utilization 92%",
+      "10:10:02 INFO Handover completed cell_5->cell_6 for UE 1256",
+      "10:15:16 DEBUG PM counter collection finished for cell_5",
+      "10:18:16 WARN Admission control reject on cell_6, DL PRB utilization 92%",
+      "10:20:57 INFO PDU session modify ok for UE 7135",
+      "10:21:01 INFO RRC reconfiguration complete for UE 2600",
+      "10:22:21 INFO RRC reconfiguration complete for UE 2304",
+      "10:27:52 INFO Handover completed cell_5->cell_6 for UE 6548",
+      "10:29:13 INFO PDU session modify ok for UE 9727",
+      "10:31:41 WARN Admission control reject on cell_6, DL PRB utilization 92%",
+      "10:31:44 WARN Admission control reject on cell_6, DL PRB utilization 92%",
+      "10:35:49 INFO RRC reconfiguration complete for UE 1443",
+      "10:36:30 INFO Handover completed cell_5->cell_6 for UE 1539",
+      "10:37:33 WARN Admission control reject on cell_6, DL PRB utilization 92%",
+      "10:38:01 WARN Admission control reject on cell_6, DL PRB utilization 92%",
+      "10:39:25 INFO Handover completed cell_5->cell_6 for UE 4687",
+      "10:40:34 ERROR HO prep rejected by cell_6: cause=radio-resources-not-available",
+      "10:48:30 ERROR SCTP association to cell_6 timeout, Xn link down",
+      "10:51:41 DEBUG scheduler tick ok on cell_5",
+      "10:53:29 ERROR HO prep rejected by cell_6: cause=radio-resources-not-available",
+      "10:53:35 INFO RRC reconfiguration complete for UE 6461",
+      "10:55:51 INFO PDU session modify ok for UE 8178",
+      "10:58:38 ERROR Xn setup failure toward cell_2: transport network layer unreachable"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S29",
+    "symptom": "Users report dropped calls around cell_8. Diagnose the problem.",
+    "serving_cell": "cell_8",
+    "kpis": {
+      "cell_8": {
+        "ho_exec_sr_pct": 78.7,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 49,
+        "rsrp_avg_dbm": -96,
+        "sinr_dl_avg_db": 14.7,
+        "ul_sinr_avg_db": 14.8,
+        "pusch_bler_pct": 2.5,
+        "phr_avg_db": 10.7,
+        "prb_util_dl_pct": 56
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 21.9,
+        "ul_sinr_avg_db": 17.3,
+        "pusch_bler_pct": 1.6,
+        "phr_avg_db": 13.8,
+        "prb_util_dl_pct": 55
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -88,
+        "sinr_dl_avg_db": 17.7,
+        "ul_sinr_avg_db": 10.3,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 8.4,
+        "prb_util_dl_pct": 59
+      }
+    },
+    "logs": [
+      "10:03:04 INFO Handover completed cell_8->cell_6 for UE 9189",
+      "10:04:00 INFO RRC reconfiguration complete for UE 8304",
+      "10:05:58 INFO PDU session modify ok for UE 7950",
+      "10:09:17 INFO PDU session modify ok for UE 3887",
+      "10:09:25 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-115dBm",
+      "10:12:37 ERROR T310 expired before HO command, UE 1701 context released on cell_8",
+      "10:13:14 DEBUG PM counter collection finished for cell_8",
+      "10:14:11 INFO Handover completed cell_8->cell_6 for UE 2326",
+      "10:14:30 INFO PDU session modify ok for UE 4306",
+      "10:19:11 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-115dBm",
+      "10:19:56 DEBUG PM counter collection finished for cell_8",
+      "10:21:35 DEBUG PM counter collection finished for cell_8",
+      "10:23:23 ERROR T310 expired before HO command, UE 3917 context released on cell_8",
+      "10:24:32 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-115dBm",
+      "10:26:08 DEBUG scheduler tick ok on cell_8",
+      "10:26:35 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-115dBm",
+      "10:34:21 INFO RRC reconfiguration complete for UE 2724",
+      "10:41:11 INFO Periodic measurement report received from UE 4284",
+      "10:45:10 INFO PDU session modify ok for UE 8939",
+      "10:47:31 DEBUG PM counter collection finished for cell_8",
+      "10:48:17 DEBUG scheduler tick ok on cell_8",
+      "10:51:16 DEBUG scheduler tick ok on cell_8",
+      "10:56:36 INFO PDU session modify ok for UE 7057"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S06",
+    "symptom": "KPI alarm raised on cell_12: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_12",
+    "kpis": {
+      "cell_12": {
+        "ho_exec_sr_pct": 82.0,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 23,
+        "rsrp_avg_dbm": -117,
+        "sinr_dl_avg_db": 1.0,
+        "ul_sinr_avg_db": 17.8,
+        "pusch_bler_pct": 2.3,
+        "phr_avg_db": 16.0,
+        "prb_util_dl_pct": 44
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 19.0,
+        "ul_sinr_avg_db": 17.5,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 11.9,
+        "prb_util_dl_pct": 47
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 14.0,
+        "ul_sinr_avg_db": 11.7,
+        "pusch_bler_pct": 4.7,
+        "phr_avg_db": 16.1,
+        "prb_util_dl_pct": 33
+      }
+    },
+    "logs": [
+      "10:02:55 INFO PDU session modify ok for UE 9764",
+      "10:03:04 WARN MeasReport: serving cell_12 RSRP=-116dBm below -108dBm, no target above A3 threshold",
+      "10:04:28 WARN MeasReport: serving cell_12 RSRP=-116dBm below -108dBm, no target above A3 threshold",
+      "10:06:07 INFO Handover completed cell_12->cell_2 for UE 8197",
+      "10:06:43 DEBUG PM counter collection finished for cell_12",
+      "10:10:39 INFO Periodic measurement report received from UE 9606",
+      "10:11:36 WARN Serving cell SINR below 3dB for UE 1775 at cell edge of cell_12",
+      "10:13:39 WARN RLF detected for UE 7995, cause=out-of-sync, serving cell_12",
+      "10:14:12 INFO Periodic measurement report received from UE 1583",
+      "10:14:28 WARN MeasReport: serving cell_12 RSRP=-116dBm below -108dBm, no target above A3 threshold",
+      "10:21:02 WARN RLF detected for UE 5667, cause=out-of-sync, serving cell_12",
+      "10:21:15 INFO PDU session modify ok for UE 1511",
+      "10:24:55 INFO Periodic measurement report received from UE 2222",
+      "10:27:21 DEBUG PM counter collection finished for cell_12",
+      "10:30:39 INFO RRC reconfiguration complete for UE 4110",
+      "10:37:32 WARN RLF detected for UE 4643, cause=out-of-sync, serving cell_12",
+      "10:45:26 WARN MeasReport: serving cell_12 RSRP=-116dBm below -108dBm, no target above A3 threshold",
+      "10:48:32 DEBUG PM counter collection finished for cell_12",
+      "10:54:25 INFO RRC reconfiguration complete for UE 8741",
+      "10:56:36 INFO Periodic measurement report received from UE 2027",
+      "10:56:43 DEBUG PM counter collection finished for cell_12",
+      "10:57:10 INFO PDU session modify ok for UE 7746"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S56",
+    "symptom": "KPI alarm raised on cell_6: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_6",
+    "kpis": {
+      "cell_6": {
+        "ho_exec_sr_pct": 83.1,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 24,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 21.0,
+        "ul_sinr_avg_db": 1.8,
+        "pusch_bler_pct": 15.0,
+        "phr_avg_db": -2.1,
+        "prb_util_dl_pct": 31
+      },
+      "cell_19": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 15.7,
+        "ul_sinr_avg_db": 14.1,
+        "pusch_bler_pct": 2.7,
+        "phr_avg_db": 8.3,
+        "prb_util_dl_pct": 48
+      },
+      "cell_20": {
+        "ho_exec_sr_pct": 98.8,
+        "ho_prep_sr_pct": 98.5,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 18.3,
+        "ul_sinr_avg_db": 16.6,
+        "pusch_bler_pct": 4.5,
+        "phr_avg_db": 10.1,
+        "prb_util_dl_pct": 57
+      }
+    },
+    "logs": [
+      "10:07:44 ERROR RLF cause=UL sync loss for UE 5528, serving cell_6, DL RSRP normal",
+      "10:11:22 WARN UE 3353 at max Tx power (PHR<0), PUSCH SINR=4.7dB on cell_6",
+      "10:14:56 WARN UE 9215 at max Tx power (PHR<0), PUSCH SINR=4.7dB on cell_6",
+      "10:16:55 INFO Periodic measurement report received from UE 3645",
+      "10:30:49 INFO Periodic measurement report received from UE 8599",
+      "10:31:52 WARN PUSCH BLER above 15% on cell_6, UL power headroom negative",
+      "10:35:06 ERROR RLF cause=UL sync loss for UE 9537, serving cell_6, DL RSRP normal",
+      "10:44:57 WARN UE 5245 at max Tx power (PHR<0), PUSCH SINR=4.7dB on cell_6",
+      "10:46:47 INFO PDU session modify ok for UE 4917",
+      "10:48:15 INFO Periodic measurement report received from UE 8528",
+      "10:50:01 INFO PDU session modify ok for UE 9972",
+      "10:51:23 INFO PDU session modify ok for UE 5440",
+      "10:52:28 INFO Handover completed cell_6->cell_19 for UE 1996",
+      "10:52:56 DEBUG PM counter collection finished for cell_6",
+      "10:54:21 WARN UE 7987 at max Tx power (PHR<0), PUSCH SINR=4.7dB on cell_6",
+      "10:54:52 DEBUG PM counter collection finished for cell_6",
+      "10:55:55 INFO Periodic measurement report received from UE 4394",
+      "10:58:29 INFO PDU session modify ok for UE 4683",
+      "10:59:15 WARN PUSCH BLER above 15% on cell_6, UL power headroom negative",
+      "10:59:42 INFO RRC reconfiguration complete for UE 1610"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S34",
+    "symptom": "Handover failures have increased on cell_1 in the last hour. What is the root cause?",
+    "serving_cell": "cell_1",
+    "kpis": {
+      "cell_1": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 70.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -85,
+        "sinr_dl_avg_db": 17.8,
+        "ul_sinr_avg_db": 15.7,
+        "pusch_bler_pct": 2.6,
+        "phr_avg_db": 13.4,
+        "prb_util_dl_pct": 31
+      },
+      "cell_18": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 99.7,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 21.4,
+        "ul_sinr_avg_db": 12.6,
+        "pusch_bler_pct": 3.5,
+        "phr_avg_db": 10.5,
+        "prb_util_dl_pct": 97
+      },
+      "cell_17": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 21.4,
+        "ul_sinr_avg_db": 10.7,
+        "pusch_bler_pct": 2.2,
+        "phr_avg_db": 13.1,
+        "prb_util_dl_pct": 49
+      }
+    },
+    "logs": [
+      "10:04:15 DEBUG PM counter collection finished for cell_1",
+      "10:05:34 ERROR HO prep rejected by cell_18: cause=radio-resources-not-available",
+      "10:05:54 INFO Handover completed cell_1->cell_18 for UE 2763",
+      "10:07:16 WARN Admission control reject on cell_18, DL PRB utilization 92%",
+      "10:09:21 INFO Periodic measurement report received from UE 5188",
+      "10:17:40 WARN Admission control reject on cell_18, DL PRB utilization 92%",
+      "10:18:52 WARN Admission control reject on cell_18, DL PRB utilization 92%",
+      "10:27:51 INFO RRC reconfiguration complete for UE 2251",
+      "10:29:51 WARN Admission control reject on cell_18, DL PRB utilization 92%",
+      "10:38:25 INFO Handover completed cell_1->cell_18 for UE 5207",
+      "10:38:49 INFO PDU session modify ok for UE 5046",
+      "10:39:57 INFO Periodic measurement report received from UE 2346",
+      "10:40:09 INFO PDU session modify ok for UE 5398",
+      "10:40:53 INFO Handover completed cell_1->cell_18 for UE 7832",
+      "10:44:25 INFO RRC reconfiguration complete for UE 9035",
+      "10:46:07 INFO Handover completed cell_1->cell_18 for UE 4937",
+      "10:47:37 INFO RRC reconfiguration complete for UE 1145",
+      "10:47:42 ERROR HO prep rejected by cell_18: cause=radio-resources-not-available",
+      "10:49:10 DEBUG scheduler tick ok on cell_1",
+      "10:59:13 WARN Admission control reject on cell_18, DL PRB utilization 92%"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S40",
+    "symptom": "Users report dropped calls around cell_9. Diagnose the problem.",
+    "serving_cell": "cell_9",
+    "kpis": {
+      "cell_9": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 78.1,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 14.9,
+        "ul_sinr_avg_db": 17.9,
+        "pusch_bler_pct": 2.1,
+        "phr_avg_db": 11.3,
+        "prb_util_dl_pct": 27
+      },
+      "cell_18": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 19.0,
+        "ul_sinr_avg_db": 17.2,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 15.4,
+        "prb_util_dl_pct": 98
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.4,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 16.1,
+        "ul_sinr_avg_db": 16.8,
+        "pusch_bler_pct": 4.7,
+        "phr_avg_db": 8.1,
+        "prb_util_dl_pct": 38
+      }
+    },
+    "logs": [
+      "10:01:25 INFO RRC reconfiguration complete for UE 5076",
+      "10:01:26 WARN Admission control reject on cell_18, DL PRB utilization 97%",
+      "10:02:28 DEBUG PM counter collection finished for cell_9",
+      "10:02:39 WARN Admission control reject on cell_18, DL PRB utilization 97%",
+      "10:04:44 WARN Admission control reject on cell_18, DL PRB utilization 97%",
+      "10:08:27 ERROR HO prep rejected by cell_18: cause=radio-resources-not-available",
+      "10:09:54 INFO RRC reconfiguration complete for UE 3365",
+      "10:13:01 INFO Handover completed cell_9->cell_18 for UE 8539",
+      "10:14:42 ERROR HO prep rejected by cell_18: cause=radio-resources-not-available",
+      "10:15:20 INFO Periodic measurement report received from UE 3069",
+      "10:15:32 WARN Admission control reject on cell_18, DL PRB utilization 97%",
+      "10:19:14 WARN MeasReport: serving cell_9 RSRP=-111dBm below -108dBm, no target above A3 threshold",
+      "10:19:40 INFO PDU session modify ok for UE 5628",
+      "10:21:41 DEBUG PM counter collection finished for cell_9",
+      "10:24:23 INFO RRC reconfiguration complete for UE 2107",
+      "10:31:35 DEBUG PM counter collection finished for cell_9",
+      "10:34:32 INFO Handover completed cell_9->cell_18 for UE 4952",
+      "10:35:36 INFO Periodic measurement report received from UE 3540",
+      "10:39:29 DEBUG PM counter collection finished for cell_9",
+      "10:42:04 INFO Periodic measurement report received from UE 2075",
+      "10:49:48 INFO RRC reconfiguration complete for UE 7082",
+      "10:53:45 WARN RLF detected for UE 9178, cause=out-of-sync, serving cell_9",
+      "10:57:18 ERROR HO prep rejected by cell_18: cause=radio-resources-not-available",
+      "10:57:31 INFO Handover completed cell_9->cell_18 for UE 7480"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S42",
+    "symptom": "Users report dropped calls around cell_15. Diagnose the problem.",
+    "serving_cell": "cell_15",
+    "kpis": {
+      "cell_15": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 53.0,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 18.7,
+        "ul_sinr_avg_db": 10.3,
+        "pusch_bler_pct": 1.2,
+        "phr_avg_db": 11.0,
+        "prb_util_dl_pct": 55
+      },
+      "cell_9": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 17.9,
+        "ul_sinr_avg_db": 10.0,
+        "pusch_bler_pct": 3.4,
+        "phr_avg_db": 9.7,
+        "prb_util_dl_pct": 60
+      },
+      "cell_20": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 16.0,
+        "ul_sinr_avg_db": 15.8,
+        "pusch_bler_pct": 2.8,
+        "phr_avg_db": 11.9,
+        "prb_util_dl_pct": 53
+      }
+    },
+    "logs": [
+      "10:00:12 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:11:39 DEBUG PM counter collection finished for cell_15",
+      "10:13:09 DEBUG scheduler tick ok on cell_15",
+      "10:13:44 INFO Periodic measurement report received from UE 2433",
+      "10:13:59 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:18:47 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:20:08 INFO Handover completed cell_15->cell_9 for UE 2231",
+      "10:25:54 INFO Periodic measurement report received from UE 1558",
+      "10:26:22 DEBUG scheduler tick ok on cell_15",
+      "10:31:02 INFO Periodic measurement report received from UE 7999",
+      "10:33:14 INFO PDU session modify ok for UE 9497",
+      "10:36:18 INFO Periodic measurement report received from UE 1617",
+      "10:39:21 INFO Handover completed cell_15->cell_9 for UE 8100",
+      "10:40:11 INFO PDU session modify ok for UE 5989",
+      "10:44:24 ERROR Xn HO prep timeout (TXnRELOCprep expired) toward cell_9",
+      "10:45:03 INFO PDU session modify ok for UE 3871",
+      "10:46:13 DEBUG PM counter collection finished for cell_15",
+      "10:48:54 INFO Handover completed cell_15->cell_9 for UE 1534",
+      "10:50:31 ERROR SCTP association to cell_9 timeout, Xn link down",
+      "10:51:05 INFO Periodic measurement report received from UE 9799",
+      "10:53:00 INFO PDU session modify ok for UE 8197",
+      "10:53:58 DEBUG PM counter collection finished for cell_15",
+      "10:57:05 ERROR SCTP association to cell_9 timeout, Xn link down"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "xn_transport",
+      "fix": "Fix the Xn transport path: check SCTP association, routing and backhaul."
+    }
+  },
+  {
+    "id": "S12",
+    "symptom": "Handover failures have increased on cell_12 in the last hour. What is the root cause?",
+    "serving_cell": "cell_12",
+    "kpis": {
+      "cell_12": {
+        "ho_exec_sr_pct": 85.9,
+        "ho_prep_sr_pct": 61.3,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 19.0,
+        "ul_sinr_avg_db": 17.6,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 11.4,
+        "prb_util_dl_pct": 31
+      },
+      "cell_8": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 98.8,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 17.3,
+        "ul_sinr_avg_db": 13.5,
+        "pusch_bler_pct": 3.5,
+        "phr_avg_db": 10.0,
+        "prb_util_dl_pct": 46
+      },
+      "cell_20": {
+        "ho_exec_sr_pct": 98.9,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 17.9,
+        "ul_sinr_avg_db": 14.1,
+        "pusch_bler_pct": 2.5,
+        "phr_avg_db": 12.6,
+        "prb_util_dl_pct": 58
+      }
+    },
+    "logs": [
+      "10:00:22 WARN ANR: unknown PCI 109 reported in MeasReport by UE 2046, no neighbor relation",
+      "10:01:15 DEBUG scheduler tick ok on cell_12",
+      "10:11:55 INFO PDU session modify ok for UE 6362",
+      "10:12:38 INFO Handover completed cell_12->cell_8 for UE 8166",
+      "10:13:54 ERROR HO prep failed: target PCI 109 not found in NRT of cell_12",
+      "10:15:23 INFO Handover completed cell_12->cell_8 for UE 6861",
+      "10:16:51 ERROR HO prep failed: target PCI 109 not found in NRT of cell_12",
+      "10:23:18 WARN ANR: unknown PCI 109 reported in MeasReport by UE 6529, no neighbor relation",
+      "10:27:07 DEBUG PM counter collection finished for cell_12",
+      "10:36:32 DEBUG scheduler tick ok on cell_12",
+      "10:36:41 INFO Handover completed cell_12->cell_8 for UE 6095",
+      "10:43:38 INFO Periodic measurement report received from UE 6597",
+      "10:44:16 INFO Handover completed cell_12->cell_8 for UE 7230",
+      "10:45:36 WARN ANR: unknown PCI 109 reported in MeasReport by UE 3621, no neighbor relation",
+      "10:47:18 INFO Periodic measurement report received from UE 3967",
+      "10:50:25 WARN ANR: unknown PCI 109 reported in MeasReport by UE 4719, no neighbor relation",
+      "10:51:06 ERROR HO prep failed: target PCI 109 not found in NRT of cell_12",
+      "10:53:03 INFO Periodic measurement report received from UE 8505",
+      "10:53:22 DEBUG scheduler tick ok on cell_12",
+      "10:57:19 INFO Handover completed cell_12->cell_8 for UE 7937",
+      "10:58:54 ERROR HO prep failed: target PCI 109 not found in NRT of cell_12"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S15",
+    "symptom": "Handover failures have increased on cell_14 in the last hour. What is the root cause?",
+    "serving_cell": "cell_14",
+    "kpis": {
+      "cell_14": {
+        "ho_exec_sr_pct": 86.3,
+        "ho_prep_sr_pct": 70.2,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 14.0,
+        "ul_sinr_avg_db": 10.3,
+        "pusch_bler_pct": 2.2,
+        "phr_avg_db": 17.7,
+        "prb_util_dl_pct": 52
+      },
+      "cell_6": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 20.1,
+        "ul_sinr_avg_db": 16.6,
+        "pusch_bler_pct": 1.1,
+        "phr_avg_db": 13.5,
+        "prb_util_dl_pct": 32
+      },
+      "cell_10": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 21.0,
+        "ul_sinr_avg_db": 11.9,
+        "pusch_bler_pct": 4.8,
+        "phr_avg_db": 14.7,
+        "prb_util_dl_pct": 58
+      }
+    },
+    "logs": [
+      "10:02:25 WARN PUSCH BLER above 15% on cell_14, UL power headroom negative",
+      "10:05:09 WARN ANR: unknown PCI 320 reported in MeasReport by UE 4353, no neighbor relation",
+      "10:08:13 DEBUG scheduler tick ok on cell_14",
+      "10:11:50 INFO Periodic measurement report received from UE 5225",
+      "10:13:29 INFO Handover completed cell_14->cell_6 for UE 1721",
+      "10:13:52 ERROR HO prep failed: target PCI 320 not found in NRT of cell_14",
+      "10:14:06 INFO Handover completed cell_14->cell_6 for UE 7250",
+      "10:14:58 INFO PDU session modify ok for UE 9606",
+      "10:23:36 INFO RRC reconfiguration complete for UE 2700",
+      "10:25:20 WARN ANR: unknown PCI 320 reported in MeasReport by UE 1376, no neighbor relation",
+      "10:28:09 DEBUG scheduler tick ok on cell_14",
+      "10:30:59 INFO PDU session modify ok for UE 4633",
+      "10:34:07 WARN UE 7694 at max Tx power (PHR<0), PUSCH SINR=3.6dB on cell_14",
+      "10:39:54 INFO PDU session modify ok for UE 2688",
+      "10:44:37 DEBUG scheduler tick ok on cell_14",
+      "10:47:54 ERROR HO prep failed: target PCI 320 not found in NRT of cell_14",
+      "10:50:44 DEBUG scheduler tick ok on cell_14",
+      "10:51:30 DEBUG PM counter collection finished for cell_14",
+      "10:52:31 ERROR HO prep failed: target PCI 320 not found in NRT of cell_14",
+      "10:53:10 INFO Periodic measurement report received from UE 9698",
+      "10:54:47 ERROR HO prep failed: target PCI 320 not found in NRT of cell_14",
+      "10:54:47 WARN ANR: unknown PCI 320 reported in MeasReport by UE 8729, no neighbor relation",
+      "10:57:08 WARN ANR: unknown PCI 320 reported in MeasReport by UE 3324, no neighbor relation"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S36",
+    "symptom": "Users report dropped calls around cell_7. Diagnose the problem.",
+    "serving_cell": "cell_7",
+    "kpis": {
+      "cell_7": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 74.9,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 19.8,
+        "ul_sinr_avg_db": 13.4,
+        "pusch_bler_pct": 2.1,
+        "phr_avg_db": 15.9,
+        "prb_util_dl_pct": 48
+      },
+      "cell_4": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.4,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -89,
+        "sinr_dl_avg_db": 17.1,
+        "ul_sinr_avg_db": 11.6,
+        "pusch_bler_pct": 2.5,
+        "phr_avg_db": 13.6,
+        "prb_util_dl_pct": 99
+      },
+      "cell_17": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 17.6,
+        "ul_sinr_avg_db": 12.9,
+        "pusch_bler_pct": 2.6,
+        "phr_avg_db": 16.4,
+        "prb_util_dl_pct": 43
+      }
+    },
+    "logs": [
+      "10:02:25 ERROR HO prep rejected by cell_4: cause=radio-resources-not-available",
+      "10:02:37 INFO Handover completed cell_7->cell_4 for UE 2689",
+      "10:04:05 INFO PDU session modify ok for UE 2277",
+      "10:05:27 INFO PDU session modify ok for UE 4486",
+      "10:09:19 DEBUG PM counter collection finished for cell_7",
+      "10:13:00 DEBUG scheduler tick ok on cell_7",
+      "10:14:10 ERROR HO prep rejected by cell_4: cause=radio-resources-not-available",
+      "10:16:27 DEBUG scheduler tick ok on cell_7",
+      "10:17:55 ERROR HO prep rejected by cell_4: cause=radio-resources-not-available",
+      "10:19:53 INFO RRC reconfiguration complete for UE 8730",
+      "10:21:25 INFO Periodic measurement report received from UE 8739",
+      "10:23:02 INFO PDU session modify ok for UE 3116",
+      "10:26:29 ERROR HO prep rejected by cell_4: cause=radio-resources-not-available",
+      "10:38:17 WARN Admission control reject on cell_4, DL PRB utilization 93%",
+      "10:39:15 DEBUG PM counter collection finished for cell_7",
+      "10:41:14 ERROR HO prep rejected by cell_4: cause=radio-resources-not-available",
+      "10:43:39 DEBUG PM counter collection finished for cell_7",
+      "10:44:54 DEBUG PM counter collection finished for cell_7",
+      "10:45:21 INFO Handover completed cell_7->cell_4 for UE 6558",
+      "10:47:52 INFO RRC reconfiguration complete for UE 1238",
+      "10:51:21 WARN Admission control reject on cell_4, DL PRB utilization 93%",
+      "10:53:37 DEBUG PM counter collection finished for cell_7"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S24",
+    "symptom": "KPI alarm raised on cell_18: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_18",
+    "kpis": {
+      "cell_18": {
+        "ho_exec_sr_pct": 78.2,
+        "ho_prep_sr_pct": 99.6,
+        "rlf_per_hour": 45,
+        "rsrp_avg_dbm": -98,
+        "sinr_dl_avg_db": 16.6,
+        "ul_sinr_avg_db": 12.2,
+        "pusch_bler_pct": 1.6,
+        "phr_avg_db": 14.1,
+        "prb_util_dl_pct": 39
+      },
+      "cell_8": {
+        "ho_exec_sr_pct": 99.9,
+        "ho_prep_sr_pct": 98.5,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -91,
+        "sinr_dl_avg_db": 21.3,
+        "ul_sinr_avg_db": 17.3,
+        "pusch_bler_pct": 2.9,
+        "phr_avg_db": 8.9,
+        "prb_util_dl_pct": 44
+      },
+      "cell_4": {
+        "ho_exec_sr_pct": 99.2,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -84,
+        "sinr_dl_avg_db": 14.4,
+        "ul_sinr_avg_db": 11.1,
+        "pusch_bler_pct": 1.9,
+        "phr_avg_db": 15.2,
+        "prb_util_dl_pct": 35
+      }
+    },
+    "logs": [
+      "10:02:07 ERROR T310 expired before HO command, UE 8897 context released on cell_18",
+      "10:07:23 DEBUG PM counter collection finished for cell_18",
+      "10:08:07 DEBUG PM counter collection finished for cell_18",
+      "10:08:12 INFO PDU session modify ok for UE 6512",
+      "10:08:56 INFO Handover completed cell_18->cell_8 for UE 2980",
+      "10:10:11 DEBUG PM counter collection finished for cell_18",
+      "10:14:34 INFO Handover completed cell_18->cell_8 for UE 5715",
+      "10:15:58 DEBUG scheduler tick ok on cell_18",
+      "10:17:14 INFO PDU session modify ok for UE 9391",
+      "10:21:49 INFO PDU session modify ok for UE 3732",
+      "10:23:41 INFO Periodic measurement report received from UE 2270",
+      "10:27:58 INFO Handover completed cell_18->cell_8 for UE 3976",
+      "10:30:36 ERROR T310 expired before HO command, UE 7902 context released on cell_18",
+      "10:31:01 INFO RRC reconfiguration complete for UE 2608",
+      "10:32:49 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-114dBm",
+      "10:37:06 ERROR T310 expired before HO command, UE 2592 context released on cell_18",
+      "10:39:35 DEBUG PM counter collection finished for cell_18",
+      "10:40:25 INFO RRC reconfiguration complete for UE 5821",
+      "10:47:33 ERROR T310 expired before HO command, UE 7067 context released on cell_18",
+      "10:48:40 INFO RRC reconfiguration complete for UE 1122",
+      "10:53:03 INFO Periodic measurement report received from UE 7295",
+      "10:56:05 ERROR T310 expired before HO command, UE 4683 context released on cell_18",
+      "10:58:20 INFO RRC reconfiguration complete for UE 9443"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S37",
+    "symptom": "Users report dropped calls around cell_3. Diagnose the problem.",
+    "serving_cell": "cell_3",
+    "kpis": {
+      "cell_3": {
+        "ho_exec_sr_pct": 98.9,
+        "ho_prep_sr_pct": 80.9,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 16.5,
+        "ul_sinr_avg_db": 12.7,
+        "pusch_bler_pct": 4.5,
+        "phr_avg_db": 16.6,
+        "prb_util_dl_pct": 56
+      },
+      "cell_2": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 22.0,
+        "ul_sinr_avg_db": 15.8,
+        "pusch_bler_pct": 3.5,
+        "phr_avg_db": 14.7,
+        "prb_util_dl_pct": 93
+      },
+      "cell_20": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 18.3,
+        "ul_sinr_avg_db": 12.0,
+        "pusch_bler_pct": 4.6,
+        "phr_avg_db": 17.6,
+        "prb_util_dl_pct": 28
+      }
+    },
+    "logs": [
+      "10:02:17 WARN Admission control reject on cell_2, DL PRB utilization 98%",
+      "10:04:00 INFO Handover completed cell_3->cell_2 for UE 3675",
+      "10:09:13 INFO Periodic measurement report received from UE 1384",
+      "10:16:24 INFO Periodic measurement report received from UE 8655",
+      "10:16:51 DEBUG scheduler tick ok on cell_3",
+      "10:27:06 DEBUG scheduler tick ok on cell_3",
+      "10:29:33 INFO RRC reconfiguration complete for UE 4791",
+      "10:34:43 INFO PDU session modify ok for UE 7984",
+      "10:36:02 INFO Handover completed cell_3->cell_2 for UE 5684",
+      "10:37:09 ERROR HO prep rejected by cell_2: cause=radio-resources-not-available",
+      "10:39:43 WARN Admission control reject on cell_2, DL PRB utilization 98%",
+      "10:41:30 INFO Handover completed cell_3->cell_2 for UE 1254",
+      "10:48:25 DEBUG PM counter collection finished for cell_3",
+      "10:48:45 INFO Periodic measurement report received from UE 2105",
+      "10:49:45 ERROR HO prep rejected by cell_2: cause=radio-resources-not-available",
+      "10:50:20 INFO Periodic measurement report received from UE 8332",
+      "10:54:30 INFO Periodic measurement report received from UE 5197",
+      "10:58:29 WARN Admission control reject on cell_2, DL PRB utilization 98%"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "target_overload",
+      "fix": "Relieve the target cell: load balancing, offload users, or add capacity."
+    }
+  },
+  {
+    "id": "S28",
+    "symptom": "Handover failures have increased on cell_2 in the last hour. What is the root cause?",
+    "serving_cell": "cell_2",
+    "kpis": {
+      "cell_2": {
+        "ho_exec_sr_pct": 78.2,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 30,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 17.0,
+        "ul_sinr_avg_db": 13.4,
+        "pusch_bler_pct": 4.5,
+        "phr_avg_db": 15.1,
+        "prb_util_dl_pct": 52
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 98.9,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 19.8,
+        "ul_sinr_avg_db": 12.6,
+        "pusch_bler_pct": 2.2,
+        "phr_avg_db": 9.5,
+        "prb_util_dl_pct": 46
+      },
+      "cell_4": {
+        "ho_exec_sr_pct": 99.7,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 19.8,
+        "ul_sinr_avg_db": 14.5,
+        "pusch_bler_pct": 1.1,
+        "phr_avg_db": 14.9,
+        "prb_util_dl_pct": 50
+      }
+    },
+    "logs": [
+      "10:00:31 ERROR T310 expired before HO command, UE 3594 context released on cell_2",
+      "10:03:04 DEBUG PM counter collection finished for cell_2",
+      "10:08:00 INFO PDU session modify ok for UE 4641",
+      "10:16:54 INFO Periodic measurement report received from UE 8960",
+      "10:17:47 DEBUG PM counter collection finished for cell_2",
+      "10:18:16 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-114dBm",
+      "10:23:48 DEBUG PM counter collection finished for cell_2",
+      "10:26:31 ERROR T310 expired before HO command, UE 3833 context released on cell_2",
+      "10:27:16 ERROR T310 expired before HO command, UE 7901 context released on cell_2",
+      "10:27:57 WARN A3 event triggered late: offset=6dB TTT=640ms, serving RSRP at trigger=-114dBm",
+      "10:28:18 INFO Handover completed cell_2->cell_16 for UE 2765",
+      "10:31:35 ERROR T310 expired before HO command, UE 8381 context released on cell_2",
+      "10:33:44 DEBUG PM counter collection finished for cell_2",
+      "10:39:42 INFO Handover completed cell_2->cell_16 for UE 5204",
+      "10:40:26 DEBUG scheduler tick ok on cell_2",
+      "10:43:39 INFO PDU session modify ok for UE 2681",
+      "10:45:44 ERROR T310 expired before HO command, UE 1387 context released on cell_2",
+      "10:47:31 INFO PDU session modify ok for UE 5403",
+      "10:54:19 ERROR T310 expired before HO command, UE 2657 context released on cell_2",
+      "10:54:22 INFO Periodic measurement report received from UE 9014",
+      "10:59:41 DEBUG scheduler tick ok on cell_2"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S59",
+    "symptom": "KPI alarm raised on cell_11: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_11",
+    "kpis": {
+      "cell_11": {
+        "ho_exec_sr_pct": 83.1,
+        "ho_prep_sr_pct": 98.9,
+        "rlf_per_hour": 20,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 16.7,
+        "ul_sinr_avg_db": 2.5,
+        "pusch_bler_pct": 23.2,
+        "phr_avg_db": -2.0,
+        "prb_util_dl_pct": 54
+      },
+      "cell_1": {
+        "ho_exec_sr_pct": 98.6,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -86,
+        "sinr_dl_avg_db": 21.6,
+        "ul_sinr_avg_db": 14.7,
+        "pusch_bler_pct": 3.2,
+        "phr_avg_db": 12.9,
+        "prb_util_dl_pct": 51
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.6,
+        "ho_prep_sr_pct": 98.6,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 14.7,
+        "ul_sinr_avg_db": 15.8,
+        "pusch_bler_pct": 4.3,
+        "phr_avg_db": 11.5,
+        "prb_util_dl_pct": 25
+      }
+    },
+    "logs": [
+      "10:00:11 WARN PUSCH BLER above 15% on cell_11, UL power headroom negative",
+      "10:01:50 INFO Periodic measurement report received from UE 4445",
+      "10:08:19 WARN PUSCH BLER above 15% on cell_11, UL power headroom negative",
+      "10:10:05 INFO RRC reconfiguration complete for UE 4100",
+      "10:11:01 DEBUG PM counter collection finished for cell_11",
+      "10:14:07 INFO Periodic measurement report received from UE 7307",
+      "10:17:26 INFO Periodic measurement report received from UE 5811",
+      "10:18:56 DEBUG scheduler tick ok on cell_11",
+      "10:27:12 INFO Periodic measurement report received from UE 7343",
+      "10:31:28 INFO Handover completed cell_11->cell_1 for UE 6346",
+      "10:32:08 DEBUG PM counter collection finished for cell_11",
+      "10:33:06 DEBUG PM counter collection finished for cell_11",
+      "10:33:32 INFO PDU session modify ok for UE 5364",
+      "10:42:38 INFO RRC reconfiguration complete for UE 6185",
+      "10:44:24 WARN PUSCH BLER above 15% on cell_11, UL power headroom negative",
+      "10:45:54 INFO Handover completed cell_11->cell_1 for UE 6572",
+      "10:48:45 WARN PUSCH BLER above 15% on cell_11, UL power headroom negative",
+      "10:50:59 DEBUG PM counter collection finished for cell_11",
+      "10:52:46 INFO Periodic measurement report received from UE 8868",
+      "10:53:51 WARN UE 3818 at max Tx power (PHR<0), PUSCH SINR=3.0dB on cell_11",
+      "10:54:06 INFO PDU session modify ok for UE 7077",
+      "10:55:51 INFO Periodic measurement report received from UE 3734"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "ul_power_control",
+      "fix": "Retune UL power control (P0 nominal / alpha) so UEs are not power limited."
+    }
+  },
+  {
+    "id": "S02",
+    "symptom": "Users report dropped calls around cell_3. Diagnose the problem.",
+    "serving_cell": "cell_3",
+    "kpis": {
+      "cell_3": {
+        "ho_exec_sr_pct": 75.8,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 35,
+        "rsrp_avg_dbm": -114,
+        "sinr_dl_avg_db": 0.9,
+        "ul_sinr_avg_db": 13.2,
+        "pusch_bler_pct": 4.9,
+        "phr_avg_db": 10.6,
+        "prb_util_dl_pct": 55
+      },
+      "cell_17": {
+        "ho_exec_sr_pct": 98.5,
+        "ho_prep_sr_pct": 99.3,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 14.2,
+        "ul_sinr_avg_db": 15.1,
+        "pusch_bler_pct": 1.7,
+        "phr_avg_db": 17.6,
+        "prb_util_dl_pct": 29
+      },
+      "cell_12": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 2,
+        "rsrp_avg_dbm": -82,
+        "sinr_dl_avg_db": 15.9,
+        "ul_sinr_avg_db": 10.6,
+        "pusch_bler_pct": 4.5,
+        "phr_avg_db": 8.6,
+        "prb_util_dl_pct": 58
+      }
+    },
+    "logs": [
+      "10:02:56 INFO Handover completed cell_3->cell_17 for UE 9200",
+      "10:05:29 DEBUG scheduler tick ok on cell_3",
+      "10:05:43 DEBUG PM counter collection finished for cell_3",
+      "10:05:48 DEBUG PM counter collection finished for cell_3",
+      "10:06:20 DEBUG scheduler tick ok on cell_3",
+      "10:07:09 WARN MeasReport: serving cell_3 RSRP=-117dBm below -108dBm, no target above A3 threshold",
+      "10:09:06 DEBUG PM counter collection finished for cell_3",
+      "10:09:14 DEBUG PM counter collection finished for cell_3",
+      "10:10:49 WARN MeasReport: serving cell_3 RSRP=-117dBm below -108dBm, no target above A3 threshold",
+      "10:13:15 INFO PDU session modify ok for UE 5395",
+      "10:13:52 INFO RRC reconfiguration complete for UE 6276",
+      "10:15:21 INFO Periodic measurement report received from UE 6571",
+      "10:18:03 DEBUG PM counter collection finished for cell_3",
+      "10:22:10 WARN Serving cell SINR below 3dB for UE 9467 at cell edge of cell_3",
+      "10:23:27 WARN Serving cell SINR below 3dB for UE 9194 at cell edge of cell_3",
+      "10:29:17 WARN RLF detected for UE 1462, cause=out-of-sync, serving cell_3",
+      "10:30:47 WARN RLF detected for UE 5977, cause=out-of-sync, serving cell_3",
+      "10:34:29 DEBUG PM counter collection finished for cell_3",
+      "10:34:33 DEBUG scheduler tick ok on cell_3",
+      "10:35:08 WARN RLF detected for UE 3250, cause=out-of-sync, serving cell_3",
+      "10:37:51 DEBUG PM counter collection finished for cell_3",
+      "10:38:32 DEBUG scheduler tick ok on cell_3",
+      "10:49:35 INFO Handover completed cell_3->cell_17 for UE 7045",
+      "10:51:45 INFO RRC reconfiguration complete for UE 1281"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  },
+  {
+    "id": "S19",
+    "symptom": "Users report dropped calls around cell_13. Diagnose the problem.",
+    "serving_cell": "cell_13",
+    "kpis": {
+      "cell_13": {
+        "ho_exec_sr_pct": 86.8,
+        "ho_prep_sr_pct": 69.0,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -87,
+        "sinr_dl_avg_db": 19.3,
+        "ul_sinr_avg_db": 14.5,
+        "pusch_bler_pct": 3.9,
+        "phr_avg_db": 11.6,
+        "prb_util_dl_pct": 46
+      },
+      "cell_3": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 99.2,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 20.3,
+        "ul_sinr_avg_db": 12.4,
+        "pusch_bler_pct": 1.8,
+        "phr_avg_db": 16.0,
+        "prb_util_dl_pct": 51
+      },
+      "cell_11": {
+        "ho_exec_sr_pct": 98.7,
+        "ho_prep_sr_pct": 99.0,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -80,
+        "sinr_dl_avg_db": 15.1,
+        "ul_sinr_avg_db": 14.9,
+        "pusch_bler_pct": 2.2,
+        "phr_avg_db": 17.8,
+        "prb_util_dl_pct": 51
+      }
+    },
+    "logs": [
+      "10:01:02 WARN ANR: unknown PCI 439 reported in MeasReport by UE 9466, no neighbor relation",
+      "10:04:03 INFO Handover completed cell_13->cell_3 for UE 1289",
+      "10:05:03 DEBUG scheduler tick ok on cell_13",
+      "10:11:42 ERROR HO prep failed: target PCI 439 not found in NRT of cell_13",
+      "10:16:25 INFO RRC reconfiguration complete for UE 8400",
+      "10:18:13 INFO RRC reconfiguration complete for UE 1571",
+      "10:18:59 DEBUG scheduler tick ok on cell_13",
+      "10:21:34 INFO Periodic measurement report received from UE 6955",
+      "10:22:21 INFO Handover completed cell_13->cell_3 for UE 7258",
+      "10:25:01 INFO Handover completed cell_13->cell_3 for UE 6505",
+      "10:26:53 ERROR HO prep failed: target PCI 439 not found in NRT of cell_13",
+      "10:32:34 DEBUG PM counter collection finished for cell_13",
+      "10:33:53 ERROR HO prep failed: target PCI 439 not found in NRT of cell_13",
+      "10:41:47 INFO Handover completed cell_13->cell_3 for UE 1614",
+      "10:41:48 WARN ANR: unknown PCI 439 reported in MeasReport by UE 4239, no neighbor relation",
+      "10:43:31 INFO RRC reconfiguration complete for UE 7059",
+      "10:43:40 DEBUG PM counter collection finished for cell_13",
+      "10:45:11 INFO RRC reconfiguration complete for UE 7249",
+      "10:45:45 INFO Handover completed cell_13->cell_3 for UE 8897",
+      "10:48:07 DEBUG PM counter collection finished for cell_13",
+      "10:49:58 INFO Periodic measurement report received from UE 1296",
+      "10:54:51 WARN ANR: unknown PCI 439 reported in MeasReport by UE 3128, no neighbor relation",
+      "10:56:35 INFO RRC reconfiguration complete for UE 7824",
+      "10:57:32 ERROR HO prep failed: target PCI 439 not found in NRT of cell_13",
+      "10:57:33 INFO Handover completed cell_13->cell_3 for UE 4948"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "missing_neighbor",
+      "fix": "Add the missing neighbor relation (target PCI) to the NRT of the serving cell."
+    }
+  },
+  {
+    "id": "S25",
+    "symptom": "KPI alarm raised on cell_10: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_10",
+    "kpis": {
+      "cell_10": {
+        "ho_exec_sr_pct": 88.0,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 32,
+        "rsrp_avg_dbm": -94,
+        "sinr_dl_avg_db": 21.8,
+        "ul_sinr_avg_db": 16.9,
+        "pusch_bler_pct": 4.8,
+        "phr_avg_db": 8.2,
+        "prb_util_dl_pct": 28
+      },
+      "cell_15": {
+        "ho_exec_sr_pct": 99.8,
+        "ho_prep_sr_pct": 98.7,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -92,
+        "sinr_dl_avg_db": 18.5,
+        "ul_sinr_avg_db": 15.8,
+        "pusch_bler_pct": 1.3,
+        "phr_avg_db": 13.1,
+        "prb_util_dl_pct": 34
+      },
+      "cell_7": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 99.5,
+        "rlf_per_hour": 1,
+        "rsrp_avg_dbm": -83,
+        "sinr_dl_avg_db": 19.7,
+        "ul_sinr_avg_db": 14.9,
+        "pusch_bler_pct": 2.6,
+        "phr_avg_db": 9.3,
+        "prb_util_dl_pct": 45
+      }
+    },
+    "logs": [
+      "10:02:02 ERROR T310 expired before HO command, UE 2244 context released on cell_10",
+      "10:06:45 INFO Periodic measurement report received from UE 9486",
+      "10:09:23 ERROR T310 expired before HO command, UE 3604 context released on cell_10",
+      "10:10:02 INFO Handover completed cell_10->cell_15 for UE 7495",
+      "10:13:03 WARN MeasReport: serving cell_10 RSRP=-110dBm below -108dBm, no target above A3 threshold",
+      "10:21:18 DEBUG PM counter collection finished for cell_10",
+      "10:21:19 DEBUG PM counter collection finished for cell_10",
+      "10:23:18 INFO Periodic measurement report received from UE 1952",
+      "10:23:32 DEBUG PM counter collection finished for cell_10",
+      "10:25:19 ERROR T310 expired before HO command, UE 6882 context released on cell_10",
+      "10:25:49 INFO Periodic measurement report received from UE 5871",
+      "10:26:16 ERROR T310 expired before HO command, UE 1875 context released on cell_10",
+      "10:30:22 WARN Serving cell SINR below 3dB for UE 7624 at cell edge of cell_10",
+      "10:33:02 INFO RRC reconfiguration complete for UE 1077",
+      "10:34:18 INFO RRC reconfiguration complete for UE 9255",
+      "10:37:13 ERROR T310 expired before HO command, UE 6165 context released on cell_10",
+      "10:37:29 DEBUG scheduler tick ok on cell_10",
+      "10:47:18 DEBUG scheduler tick ok on cell_10",
+      "10:50:21 ERROR T310 expired before HO command, UE 4004 context released on cell_10",
+      "10:50:34 INFO Handover completed cell_10->cell_15 for UE 1193",
+      "10:54:05 INFO RRC reconfiguration complete for UE 9966",
+      "10:55:05 DEBUG scheduler tick ok on cell_10",
+      "10:56:30 INFO Handover completed cell_10->cell_15 for UE 4907",
+      "10:58:38 ERROR T310 expired before HO command, UE 9156 context released on cell_10"
+    ],
+    "ambiguous": true,
+    "ground_truth": {
+      "root_cause": "late_trigger",
+      "fix": "Reduce A3 offset and time-to-trigger so handover starts earlier."
+    }
+  },
+  {
+    "id": "S08",
+    "symptom": "KPI alarm raised on cell_1: handover performance degraded. Find the cause and recommend a fix.",
+    "serving_cell": "cell_1",
+    "kpis": {
+      "cell_1": {
+        "ho_exec_sr_pct": 71.9,
+        "ho_prep_sr_pct": 99.1,
+        "rlf_per_hour": 36,
+        "rsrp_avg_dbm": -111,
+        "sinr_dl_avg_db": 1.2,
+        "ul_sinr_avg_db": 15.1,
+        "pusch_bler_pct": 4.5,
+        "phr_avg_db": 15.0,
+        "prb_util_dl_pct": 45
+      },
+      "cell_16": {
+        "ho_exec_sr_pct": 99.1,
+        "ho_prep_sr_pct": 98.5,
+        "rlf_per_hour": 0,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 21.8,
+        "ul_sinr_avg_db": 12.9,
+        "pusch_bler_pct": 4.1,
+        "phr_avg_db": 17.7,
+        "prb_util_dl_pct": 60
+      },
+      "cell_5": {
+        "ho_exec_sr_pct": 99.5,
+        "ho_prep_sr_pct": 99.8,
+        "rlf_per_hour": 3,
+        "rsrp_avg_dbm": -81,
+        "sinr_dl_avg_db": 20.1,
+        "ul_sinr_avg_db": 14.7,
+        "pusch_bler_pct": 2.4,
+        "phr_avg_db": 10.3,
+        "prb_util_dl_pct": 36
+      }
+    },
+    "logs": [
+      "10:04:18 DEBUG scheduler tick ok on cell_1",
+      "10:04:22 WARN Serving cell SINR below 3dB for UE 4087 at cell edge of cell_1",
+      "10:05:00 WARN RLF detected for UE 6883, cause=out-of-sync, serving cell_1",
+      "10:06:24 INFO Periodic measurement report received from UE 5900",
+      "10:06:59 DEBUG PM counter collection finished for cell_1",
+      "10:07:59 WARN RLF detected for UE 7486, cause=out-of-sync, serving cell_1",
+      "10:12:31 WARN MeasReport: serving cell_1 RSRP=-113dBm below -108dBm, no target above A3 threshold",
+      "10:12:58 INFO RRC reconfiguration complete for UE 2350",
+      "10:15:37 WARN RLF detected for UE 6391, cause=out-of-sync, serving cell_1",
+      "10:17:33 INFO RRC reconfiguration complete for UE 2468",
+      "10:25:06 DEBUG scheduler tick ok on cell_1",
+      "10:25:08 INFO Handover completed cell_1->cell_16 for UE 3865",
+      "10:25:41 INFO Periodic measurement report received from UE 6444",
+      "10:28:18 INFO RRC reconfiguration complete for UE 1844",
+      "10:28:49 INFO Periodic measurement report received from UE 8348",
+      "10:30:32 INFO Periodic measurement report received from UE 1661",
+      "10:34:38 DEBUG scheduler tick ok on cell_1",
+      "10:34:47 INFO PDU session modify ok for UE 7153",
+      "10:47:16 INFO PDU session modify ok for UE 2983",
+      "10:47:38 WARN Serving cell SINR below 3dB for UE 7794 at cell edge of cell_1",
+      "10:48:04 WARN RLF detected for UE 9184, cause=out-of-sync, serving cell_1",
+      "10:49:51 INFO Handover completed cell_1->cell_16 for UE 8156",
+      "10:50:19 WARN MeasReport: serving cell_1 RSRP=-113dBm below -108dBm, no target above A3 threshold",
+      "10:59:05 INFO RRC reconfiguration complete for UE 2071"
+    ],
+    "ambiguous": false,
+    "ground_truth": {
+      "root_cause": "coverage_edge",
+      "fix": "Improve coverage at the cell edge: adjust antenna tilt or power, or add a cell."
+    }
+  }
+]
