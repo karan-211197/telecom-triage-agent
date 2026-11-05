@@ -4,11 +4,17 @@ import sys
 import time
 from collections import defaultdict
 
-from agent import run_agent
-
 DATA = sys.argv[1] if len(sys.argv) > 1 else "data/scenarios.json"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "results/eval_results.json"
-USE_SPECS = not (len(sys.argv) > 3 and sys.argv[3] == "nospecs")
+
+EXTRA = sys.argv[3:]
+USE_SPECS = "nospecs" not in EXTRA
+USE_GRAPH = "graph" in EXTRA
+
+if USE_GRAPH:
+    from agent_graph import run_agent_graph as run_agent
+else:
+    from agent import run_agent
 
 
 def main():
@@ -29,7 +35,7 @@ def main():
                 "tool_calls": 0,
                 "trace": [],
                 "forced": False,
-                "error": str(e),
+                "error": f"{type(e).__name__}: {e}",  # NEW: include the exception type
             }
         seconds = round(time.time() - start, 1)
 
@@ -48,6 +54,7 @@ def main():
             "forced": result["forced"],
             "used_specs": any(t["tool"] == "ask_specs" for t in result["trace"]),
             "trace": result["trace"],
+            "error": result.get("error"),  # NEW
         })
         flag = "OK  " if correct else "FAIL"
         print(f"{s['id']} {flag} truth={truth:<17} predicted={str(predicted):<17} calls={result['tool_calls']} {seconds}s")
@@ -58,6 +65,7 @@ def main():
     amb = [r for r in rows if r["ambiguous"]]
 
     print("\n=== SUMMARY ===")
+    print(f"Engine: {'langgraph' if USE_GRAPH else 'raw loop'} | ask_specs {'on' if USE_SPECS else 'off'}")
     print(f"Overall accuracy:   {n_correct}/{total} ({100 * n_correct / total:.0f}%)")
     print(f"Clear scenarios:    {sum(r['correct'] for r in clear)}/{len(clear)}")
     print(f"Ambiguous scenarios: {sum(r['correct'] for r in amb)}/{len(amb)}")
@@ -81,13 +89,15 @@ def main():
     print(f"\n=== FAILURE ANALYSIS ({len(failures)}) ===")
     for r in failures:
         print(f"\n{r['id']}: truth={r['truth']} predicted={r['predicted']} status={r['status']} ambiguous={r['ambiguous']}")
+        if r["status"] == "error":  # NEW
+            print("   error:", r["error"])  # NEW
         for t in r["trace"]:
             print("   ->", t["tool"], t["args"])
 
     os.makedirs("results", exist_ok=True)
     with open(OUT, "w") as f:
         json.dump({"accuracy": n_correct / total, "rows": rows}, f, indent=2)
-    print(f"\nSaved {OUT}")  # FIX: was a fixed string
+    print(f"\nSaved {OUT}")
 
 
 if __name__ == "__main__":
